@@ -1,5 +1,7 @@
-const githubUsername = window.secret.GIT_USERNAME;
-const githubToken = window.secret.GIT_TOKEN;
+import { getInput } from '@actions/core';
+
+const githubUsername = getInput('GIT_USERNAME');
+const githubToken = getInput('GIT_TOKEN');
 
 
 axios.get(`https://api.github.com/users/${githubUsername}/repos?type=all&sort=updated&direction=desc`, {
