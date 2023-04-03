@@ -1,5 +1,5 @@
-const githubUsername = process.env.GIT_USERNAME;
-const githubToken = process.env.GIT_TOKEN;
+const githubUsername = secrets.GIT_USERNAME;
+const githubToken = secrets.GIT_TOKEN;
 
 
 axios.get(`https://api.github.com/users/${githubUsername}/repos?type=all&sort=updated&direction=desc`, {
