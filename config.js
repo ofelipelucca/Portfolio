@@ -2,3 +2,4 @@ const tokenEncoded = 'Z2l0aHViX3BhdF8xMUE2V0VORFkwTUNTR2l1QWdQUk1MX1hkQ1owb2trTU
 
 export const githubUsername = "ofelipelucca"
 export const githubToken = atob(tokenEncoded);
+// nao ta seguro bla bla bla, eu tentei com env. num deu >:(((

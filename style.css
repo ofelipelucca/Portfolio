@@ -81,10 +81,16 @@ a:link {
     text-overflow: ellipsis;
     margin-left: 1.5vh;
     margin-right: 1.5vh;
+    white-space: pre-wrap;
+    position: absolute;
+    left: 45%;
+    transform: translateX(-50%);
+    width: 29vh;
 }
 #repositorios-obs {
     color: rgb(9, 0, 14);
     font-weight: bolder;
+    margin-top: 30vh;
 }
 #repositorios-data {
     position: absolute;
@@ -112,5 +118,11 @@ a:link {
         bottom: 4vh;
         left: 50%;
         transform: translateX(-50%);
+    }
+    html, body {
+        background-color: rgb(14, 0, 11);
+    }
+    #repositorios-post {
+        background-color: rgb(24, 0, 20);
     }
 }
