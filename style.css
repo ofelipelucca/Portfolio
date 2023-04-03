@@ -22,14 +22,14 @@ p {
     position: relative;
 }
 ::-webkit-scrollbar {
-    height: 7px;
+    height: 1vh;
 }
 ::-webkit-scrollbar-track {
   background: none; 
 }
 ::-webkit-scrollbar-thumb {
   background: #ffffff;
-  border-radius: 60px;
+  border-radius: 30vh;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #a7a7a7; 
@@ -37,7 +37,7 @@ p {
 #user-avatar {
     margin-top: 4vh;
     width: 10vh;
-    border-radius: 6px;
+    border-radius: 1.5vh;
     position: absolute;
     transition: 0.4s;
 }
@@ -49,9 +49,8 @@ p {
     white-space: nowrap;
 }
 #repositorios-post {
-    position: relative;
     background-color: rgb(9, 0, 14);
-    border-radius: 15px;
+    border-radius: 2vh;
     width: 39vh;
     height: 64vh;
     margin-right: 2vh;
@@ -67,6 +66,7 @@ p {
 #repositorios-img {
     margin-left: 2vh;
     margin-top: 2vh;
+    width: 9vh;
 }
 #repositorios-link {
     margin-left: 6vh;

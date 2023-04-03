@@ -1,5 +1,6 @@
-const githubUsername = 'ofelipelucca';
-const githubToken = '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';
+const githubUsername = process.env.GIT_USERNAME;
+const githubToken = process.env.GIT_TOKEN;
+
 
 axios.get(`https://api.github.com/users/${githubUsername}/repos?type=all&sort=updated&direction=desc`, {
   headers: {
