@@ -1,5 +1,5 @@
 const githubUsername = 'ofelipelucca';
-const githubToken = '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';
+const githubToken = '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';
 
 axios.get(`https://api.github.com/users/${githubUsername}/repos?type=all&sort=updated&direction=desc`, {
   headers: {

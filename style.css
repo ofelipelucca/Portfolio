@@ -60,7 +60,6 @@ p {
     display: inline-block;
     position: relative;
     transition: 0.4s;
-    overflow-x: auto;
 }
 #repositorios-post:active {
     background-color: rgb(26, 1, 39);
@@ -77,10 +76,11 @@ p {
 a:link {
     text-decoration: none;
 }
-#repositorios-descricao {
-    white-space: nowrap;
+.repositorios-descricao {
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-left: 1.5vh;
+    margin-right: 1.5vh;
 }
 #repositorios-obs {
     color: rgb(9, 0, 14);
