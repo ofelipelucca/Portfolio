@@ -17,4 +17,4 @@ Este script em JavaScript utiliza o Axios para obter os meus repositórios públ
 
 ## 📌 Autor
 
->Felipe Lucca Taumaturgo de Oliveira, 19 anos
+Felipe Lucca Taumaturgo de Oliveira
