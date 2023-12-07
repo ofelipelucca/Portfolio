@@ -1,4 +1,7 @@
-import { githubUsername, githubToken } from './config.js'; 
+require('dotenv').config(); ///< Carrega as variaveis de ambiente do arquivo '.env'
+
+const githubUsername = process.env.GITHUB_USERNAME;
+const githubToken = process.env.GITHUB_TOKEN;
 
 axios.get(`https://api.github.com/users/${githubUsername}/repos?type=all&sort=updated&direction=desc`, {
   headers: {
