@@ -1,4 +1,5 @@
-require('dotenv').config(); ///< Carrega as variaveis de ambiente do arquivo '.env'
+import dotenv from 'dotenv';
+dotenv.config();  ///< Carrega as variaveis de ambiente do arquivo '.env'
 
 const githubUsername = process.env.GITHUB_USERNAME;
 const githubToken = process.env.GITHUB_TOKEN;
