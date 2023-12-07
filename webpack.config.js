@@ -7,7 +7,7 @@ const dotenv = require('dotenv').config( {
 module.exports = {
   entry: "./src/dashboard.js",
   output: {
-    path: path.join(__dirname, 'index.html'),
+    path: path.resolve(__dirname),
     filename: "dashboard.js",
   },
   module: {
