@@ -5,9 +5,9 @@ const {
   GITHUB_TOKEN,
 } = envVariables;
 
-axios.get(`https://api.github.com/users/${envVariables.GITHUB_USERNAME}/repos?type=all&sort=updated&direction=desc`, {
+axios.get(`https://api.github.com/users/${GITHUB_USERNAME}/repos?type=all&sort=updated&direction=desc`, {
   headers: {
-    'Authorization': `token ${envVariables.GITHUB_TOKEN}`
+    'Authorization': `token ${GITHUB_TOKEN}`
   }
 })
 .then(response => {
@@ -35,12 +35,12 @@ axios.get(`https://api.github.com/users/${envVariables.GITHUB_USERNAME}/repos?ty
     // Faz uma requisição à API do Github para obter informações detalhadas do repositório
     axios.get(repo.url, {
       headers: {
-        'Authorization': `token ${envVariables.GITHUB_TOKEN}`
+        'Authorization': `token ${GITHUB_TOKEN}`
       }
     })
     .then(response => {
       const repoData = response.data;
-      const faviconUrl = `https://raw.githubusercontent.com/${envVariables.GITHUB_USERNAME}/${repoData.name}/main/favicon.ico`;
+      const faviconUrl = `https://raw.githubusercontent.com/${GITHUB_USERNAME}/${repoData.name}/main/favicon.ico`;
   
       const createdAt = new Date(repoData.created_at);
       const formData = `${createdAt.getDate()}/${createdAt.getMonth() + 1}/${createdAt.getFullYear()}`;
@@ -51,7 +51,7 @@ axios.get(`https://api.github.com/users/${envVariables.GITHUB_USERNAME}/repos?ty
       repoElement.classList.add("repositorios-post"); // Adiciona a classe "repositorios-post" à div
       reposList.appendChild(repoElement);
       repoElement.addEventListener('click', function() { // Adiciona o evento de clique individualmente a cada div
-        window.open(`https://${envVariables.GITHUB_USERNAME}.github.io/${repo.name}/`); // Abre a nova aba com o link do repositório
+        window.open(`https://${GITHUB_USERNAME}.github.io/${repo.name}/`); // Abre a nova aba com o link do repositório
       })
     })
     .catch(error => {
