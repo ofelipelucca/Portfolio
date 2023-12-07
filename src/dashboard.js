@@ -1,9 +1,5 @@
-const envVariables = process.env;
-
-const {
-  GITHUB_USERNAME,
-  GITHUB_TOKEN,
-} = envVariables;
+const GITHUB_USERNAME = process.env.GITHUB_USERNAME;
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
 axios.get(`https://api.github.com/users/${GITHUB_USERNAME}/repos?type=all&sort=updated&direction=desc`, {
   headers: {

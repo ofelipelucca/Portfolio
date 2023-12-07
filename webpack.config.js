@@ -7,7 +7,7 @@ const dotenv = require('dotenv').config( {
 module.exports = {
   entry: "./src/dashboard.js",
   output: {
-    path: path.resolve(__dirname),
+    path: path.resolve(__dirname, __dirname),
     filename: "dashboard.js",
   },
   module: {
@@ -23,8 +23,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.DefinePlugin( {
-      "process.env": dotenv.parsed
-    } ),
+    new webpack.DefinePlugin({
+      'process.env.GITHUB_USERNAME': JSON.stringify(dotenv.parsed.GITHUB_USERNAME),
+      'process.env.GITHUB_TOKEN': JSON.stringify(dotenv.parsed.GITHUB_TOKEN)
+    }),
   ],
 };
