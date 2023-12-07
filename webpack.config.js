@@ -1,31 +1,26 @@
-const path = require("path");
-const webpack = require('webpack');
-const dotenv = require('dotenv').config( {
-  path: path.join(__dirname, '.env')
-} );
+import path from 'path';
+import Dotenv from 'dotenv-webpack';
 
-module.exports = {
+const __dirname = path.resolve();
+
+export default {
   entry: "./src/dashboard.js",
   output: {
-    path: __dirname,
-    filename: "dashboard.js",
+    path: __dirname + "/dist",
+    filename: "bundle.js",
   },
   module: {
     rules: [
       {
-        test: /\.js?$/,
-        exclude: /(node_modules)/,
-        include: path.resolve(__dirname, "src"),
+        test: /\.js$/,
+        exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
-        }
+          loader: "babel-loader",
+        },
       },
-    ]
+    ],
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env.GITHUB_USERNAME': JSON.stringify(dotenv.parsed.GITHUB_USERNAME),
-      'process.env.GITHUB_TOKEN': JSON.stringify(dotenv.parsed.GITHUB_TOKEN)
-    }),
+    new Dotenv(),
   ],
 };
