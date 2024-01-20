@@ -1,3 +1,5 @@
+*(em revisão)*
+
 # 🖥️ Dashboard de Repositórios
 
 Este script em JavaScript utiliza o Axios para obter os meus repositórios públicos no GitHub e os exibe em um dashboard web.
