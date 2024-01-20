@@ -1,4 +1,4 @@
-*(em revisão)*
+*(projeto em revisão)*
 
 # 🖥️ Dashboard de Repositórios
 
