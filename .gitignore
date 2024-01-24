@@ -1,1 +1,4 @@
+# Arquivos e pastas a serem ignorados
 node_modules/
+dist/
+.env
