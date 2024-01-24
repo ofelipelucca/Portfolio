@@ -1,0 +1,128 @@
+html, body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: linear-gradient(-45deg, #111111, #000000, #090008);
+    margin: 0;
+    margin-left: 2vh;
+    padding: 0;
+    height: 100%;
+    color: white;
+    user-select: none;
+}
+h1 {
+    font-size: 7vh;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+}
+p {
+    text-align: center;
+    font-size: 2.4vh;
+    font-weight: lighter;
+    padding-top: 5vh;
+    position: relative;
+}
+::-webkit-scrollbar {
+    height: 1vh;
+}
+::-webkit-scrollbar-track {
+  background: none; 
+}
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 30vh;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a7a7a7; 
+}
+#user-avatar {
+    margin-top: 4vh;
+    width: 10vh;
+    border-radius: 1.5vh;
+    position: absolute;
+    transition: 0.4s;
+}
+#repos {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+    white-space: nowrap;
+}
+#repositorios-post {
+    background-color: rgb(9, 0, 14);
+    border-radius: 2vh;
+    width: 39vh;
+    height: 64vh;
+    margin-right: 2vh;
+    margin-left: 2vh;
+    margin-top: 8vh;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s;
+}
+#repositorios-post:active {
+    background-color: rgb(26, 1, 39);
+}
+#repositorios-img {
+    margin-left: 2vh;
+    margin-top: 2vh;
+    width: 9vh;
+}
+#repositorios-link {
+    margin-left: 6vh;
+    font-size: 4vh;
+    color: rgb(255, 255, 255);
+}
+a:link {
+    text-decoration: none;
+}
+.repositorios-descricao {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 1.5vh;
+    margin-right: 1.5vh;
+    white-space: pre-wrap;
+    position: absolute;
+    left: 45%;
+    transform: translateX(-50%);
+    width: 29vh;
+}
+#repositorios-obs {
+    color: rgb(9, 0, 14);
+    font-weight: bolder;
+    margin-top: 30vh;
+}
+#repositorios-data {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: lighter;
+}
+
+@media (min-width: 450px) {
+    #repositorios-post:hover {
+        background-color: rgb(31, 0, 48);
+        width: 50vh;
+    }
+    #user-avatar:hover {
+        width: 15vh;
+        position: relative;
+    }
+}
+@media (max-width: 450px) {
+    #repositorios-obs {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        font-weight: lighter;
+        bottom: 4vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    html, body {
+        background-color: rgb(14, 0, 11);
+    }
+    #repositorios-post {
+        background-color: rgb(24, 0, 20);
+    }
+}

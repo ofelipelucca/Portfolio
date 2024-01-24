@@ -1,0 +1,15 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Meu portfolio com todos os meus repositorios publicos, expostos em um dashboard",
+  "main": "src/dashboard.js",
+  "scripts": {
+    "start": "node src/axios-get-repos.js"
+  },
+  "keywords": [],
+  "author": "Felipe Lucca (ofelipelucca)",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.5"
+  }
+}
