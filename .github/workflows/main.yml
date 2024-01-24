@@ -1,4 +1,4 @@
-name: Porfolio Refresh JSON
+name: Porfolio Refresh DATA JSON 
 
 on:
     schedule:
