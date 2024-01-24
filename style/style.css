@@ -1,9 +1,10 @@
 html, body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background: linear-gradient(-45deg, #111111, #000000, #090008);
+    background-size: auto;
     margin: 0;
-    margin-left: 2vh;
     padding: 0;
+    width: auto;
     height: 100%;
     color: white;
     user-select: none;
@@ -36,6 +37,7 @@ p {
 }
 #user-avatar {
     margin-top: 4vh;
+    margin-left: 2vh;
     width: 10vh;
     border-radius: 1.5vh;
     position: absolute;
