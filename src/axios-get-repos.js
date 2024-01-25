@@ -38,5 +38,5 @@ axios.get(`https://api.github.com/users/${GITHUB_USERNAME}/repos?type=all&sort=u
     });
 })
 .catch(error => {
-    console.error('Erro na requisição pelo axios:', error);
+    console.error('Erro na requisição pelo axios: ', error);
 });

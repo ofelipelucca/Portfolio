@@ -12,6 +12,7 @@ html, body {
 h1 {
     font-size: 7vh;
     position: fixed;
+    top: 75%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -26,14 +27,14 @@ p {
     height: 1vh;
 }
 ::-webkit-scrollbar-track {
-  background: none; 
+    background: none; 
 }
 ::-webkit-scrollbar-thumb {
-  background: #ffffff;
-  border-radius: 30vh;
+    background: #ffffff;
+    border-radius: 30vh;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #a7a7a7; 
+    background: #a7a7a7; 
 }
 #user-avatar {
     margin-top: 4vh;
@@ -50,20 +51,32 @@ p {
     width: 100%;
     white-space: nowrap;
 }
+.repos-list {
+    margin-left: 3%;
+}
 #repositorios-post {
     background-color: rgb(9, 0, 14);
     border-radius: 2vh;
     width: 39vh;
     height: 64vh;
+    padding-right: 2%;
     margin-right: 2vh;
     margin-left: 2vh;
     margin-top: 8vh;
+    margin-bottom: 2vh;
     display: inline-block;
     position: relative;
     transition: 0.4s;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 #repositorios-post:active {
     background-color: rgb(26, 1, 39);
+}
+.repositorios-post a {
+    color: inherit;
+    text-decoration: none;
 }
 #repositorios-img {
     margin-left: 2vh;
@@ -106,6 +119,8 @@ a:link {
     #repositorios-post:hover {
         background-color: rgb(31, 0, 48);
         width: 50vh;
+        text-wrap: wrap;
+        padding-left: 2%;
     }
     #user-avatar:hover {
         width: 15vh;
