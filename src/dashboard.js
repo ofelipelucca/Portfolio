@@ -1,5 +1,5 @@
 function loadJSONDATA(callback) {
-    fetch('https://raw.githubusercontent.com/ofelipelucca/portifolio/main/data/data.json')
+    fetch('https://raw.githubusercontent.com/ofelipelucca/portifolio/main/data/repositorios-data.json')
     .then(response => {
         if (!response.ok) {
           throw new Error('Erro ao carregar JSON: ' + response.status);
