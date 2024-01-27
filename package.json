@@ -4,7 +4,7 @@
   "description": "Meu portfolio com todos os meus repositorios publicos, expostos em um dashboard",
   "main": "src/dashboard.js",
   "scripts": {
-    "start": "node src/axios-get-repos.js"
+    "start": ""
   },
   "keywords": [],
   "author": "Felipe Lucca (ofelipelucca)",
