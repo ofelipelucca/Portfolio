@@ -4,7 +4,7 @@ const GITHUB_USERNAME = process.env.GITHUB_USERNAME;
 const fs = require('fs');
 const axios = require('axios');
 
-// Fazendo requisição das informações de todos os meus repositórios públicos
+// Fazendo a requisição das informações de todos os meus repositórios públicos
 axios.get(`https://api.github.com/users/${GITHUB_USERNAME}/repos?type=all&sort=updated&direction=desc`, {
     headers: {
         'Authorization': `token ${GITHUB_TOKEN}`

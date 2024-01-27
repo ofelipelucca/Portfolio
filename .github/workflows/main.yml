@@ -23,7 +23,7 @@ jobs:
             - name: Instalando as dependencias
               run: npm ci
               
-            - name: Rodando o codigo
+            - name: Rodando o codigo de axios
               run: node src/axios-get-repos.js
               env:
                   GITHUB_TOKEN: ${{secrets.TOKEN_GITHUB}}
