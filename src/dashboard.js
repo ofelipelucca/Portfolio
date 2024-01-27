@@ -14,7 +14,7 @@ function init(data) {
     const REPOS_DATA = data;
     const REPOS_DIV = document.getElementById('repos');
     
-    // Criando uma div no html para exibir a imagem de avatar do usuário
+    // Criando uma div para exibir a imagem de avatar do usuário
     const AVATAR_URL = "https://avatars.githubusercontent.com/u/128730767?v=4";
     const REPOS_AVATAR = document.createElement('div');
     
