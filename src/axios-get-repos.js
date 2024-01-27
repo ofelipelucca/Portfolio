@@ -12,7 +12,7 @@ axios.get(`https://api.github.com/users/${GITHUB_USERNAME}/repos?type=all&sort=u
 })
 .then(response => {
 
-    // Obtendo os dados da resposta
+    // Obtendo os dados
     const AXIOS_DATA = response.data;
     
     // Filtrando os dados por segurança

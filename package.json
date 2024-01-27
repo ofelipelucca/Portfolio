@@ -4,10 +4,10 @@
   "description": "Meu portfolio com todos os meus repositorios publicos, expostos em um dashboard",
   "main": "src/dashboard.js",
   "scripts": {
-    "start": ""
+    "start": "node axios-get-repos.js"
   },
   "keywords": [],
-  "author": "Felipe Lucca (ofelipelucca)",
+  "author": "Felipe Lucca T (ofelipelucca)",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.6.5"
