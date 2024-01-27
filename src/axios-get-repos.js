@@ -1,5 +1,5 @@
-const GITHUB_TOKEN = secrets.TOKEN_GITHUB;
-const GITHUB_USERNAME = secrets.USERNAME_GITHUB;
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const GITHUB_USERNAME = process.env.GITHUB_USERNAME;
 
 const fs = require('fs');
 const axios = require('axios');
@@ -12,7 +12,7 @@ axios.get(`https://api.github.com/users/${GITHUB_USERNAME}/repos?type=all&sort=u
 })
 .then(response => {
 
-    // Obtendo os dados da resposta
+    // Obtendo os dados
     const AXIOS_DATA = response.data;
     
     // Filtrando os dados por segurança
@@ -22,14 +22,15 @@ axios.get(`https://api.github.com/users/${GITHUB_USERNAME}/repos?type=all&sort=u
         created_at: repo.created_at,
         updated_at: repo.updated_at,
         stargazers_count: repo.stargazers_count,
-        language: repo.language
+        language: repo.language,
+        public: true
     }));
 
     // Convertendo os dados para formato JSON
     const JSON_DATA = JSON.stringify(FILTERED_DATA, null, 2);
 
     // Armazenando os dados em um arquivo JSON 
-    fs.writeFile('data/data.json', JSON_DATA, 'utf8', (err) => {
+    fs.writeFile('data/repositorios-data.json', JSON_DATA, 'utf8', (err) => {
         if (err) {
             console.error('Erro ao escrever no arquivo:', err);
         } else {
