@@ -53,13 +53,13 @@ p {
 }
 .repos-list {
     margin-left: 3%;
+    text-align: center;
 }
-#repositorios-post {
-    background-color: rgb(9, 0, 14);
+.post {
     border-radius: 2vh;
     width: 39vh;
     height: 64vh;
-    padding-right: 2%;
+    padding-right: 1%;
     margin-right: 2vh;
     margin-left: 2vh;
     margin-top: 8vh;
@@ -71,41 +71,71 @@ p {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-#repositorios-post:active {
+.post:active {
     background-color: rgb(26, 1, 39);
 }
-.repositorios-post a {
+.post a {
     color: inherit;
     text-decoration: none;
 }
+#repositorios-post {
+    background-color: #000309;
+}
+#freelances-public-post {
+    background-color: #000901;
+}
+#freelances-private-post {
+    background-color: #090600;
+}
 #repositorios-img {
-    margin-left: 2vh;
+    margin-left: 1vh;
     margin-top: 2vh;
     width: 9vh;
 }
 #repositorios-link {
-    margin-left: 6vh;
+    position: relative;
+    top: -4%;
+    margin-left: 2vh;
     font-size: 4vh;
     color: rgb(255, 255, 255);
 }
 a:link {
     text-decoration: none;
 }
-.repositorios-descricao {
+#freelance-name {
+    top: 4%;
+    position: relative;
+    padding-top: 1%;
+    padding-right: 9%;
+    font-size: 4vh;
+    width: 100%;
+    color: rgb(255, 255, 255);
+}
+#repositorios-descricao {
     overflow: hidden;
     text-overflow: ellipsis;
     margin-left: 1.5vh;
     margin-right: 1.5vh;
     white-space: pre-wrap;
-    position: absolute;
-    left: 45%;
-    transform: translateX(-50%);
+    position: relative;
+    left: 14%;
     width: 29vh;
 }
 #repositorios-obs {
-    color: rgb(9, 0, 14);
+    position: absolute;
+    bottom: 30px;
+    color: #000309;
     font-weight: bolder;
-    margin-top: 30vh;
+    width: 100%;
+    left: -0.23%;
+}
+#repositorios-obs-public {
+    position: absolute;
+    bottom: 30px;
+    color: #000901;
+    font-weight: bolder;
+    width: 100%;
+    left: -0.23%;
 }
 #repositorios-data {
     position: absolute;
@@ -117,7 +147,19 @@ a:link {
 
 @media (min-width: 450px) {
     #repositorios-post:hover {
-        background-color: rgb(31, 0, 48);
+        background-color: #1f0030;
+        width: 50vh;
+        text-wrap: wrap;
+        padding-left: 2%;
+    }
+    #freelances-public-post:hover {
+        background-color: #1f0030;
+        width: 50vh;
+        text-wrap: wrap;
+        padding-left: 2%;
+    }
+    #freelances-private-post:hover {
+        background-color: #1f0030;
         width: 50vh;
         text-wrap: wrap;
         padding-left: 2%;
