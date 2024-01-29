@@ -79,7 +79,7 @@ loadJSONData(function(data) {
       const FORM_NAME = repo.name.replace(/-/g, ' ');
   
       const REPOS_ELEMENT = document.createElement('div');
-      REPOS_ELEMENT.innerHTML = `<a target="_blank" href="${repo.link}/"><div style="width: 100%; height: 100%"><span id="freelance-name">${FORM_NAME}</span><p id="repositorios-descricao">${repo.description}</p><p id="repositorios-data">${CREATED_FORM_DATE}</p><p id="repositorios-obs-public">clique para acessar</p></div></a>`;
+      REPOS_ELEMENT.innerHTML = `<a target="_blank" href="${repo.link}/"><div style="width: 100%; height: 100%"><span id="freelance-name">${FORM_NAME}</span><p id="repositorios-descricao" style="top: -1vh;">${repo.description}</p><p id="repositorios-data">${CREATED_FORM_DATE}</p><p id="repositorios-obs-public">clique para acessar</p></div></a>`;
       REPOS_ELEMENT.setAttribute("id", "freelances-public-post");
       REPOS_ELEMENT.classList.add("post"); 
       REPOS_LIST.appendChild(REPOS_ELEMENT);
@@ -96,7 +96,7 @@ loadJSONData(function(data) {
       const FORM_NAME = repo.name.replace(/-/g, ' ');
   
       const REPOS_ELEMENT = document.createElement('div');
-      REPOS_ELEMENT.innerHTML = `<span id="freelance-name">${FORM_NAME}</span><p id="repositorios-descricao">${repo.description}</p><p id="repositorios-data">${CREATED_FORM_DATE}</p>`;
+      REPOS_ELEMENT.innerHTML = `<span id="freelance-name">${FORM_NAME}</span><p id="repositorios-descricao" style="top: -1vh;">${repo.description}</p><p id="repositorios-data">${CREATED_FORM_DATE}</p>`;
       REPOS_ELEMENT.setAttribute("id", "freelances-private-post");
       REPOS_ELEMENT.classList.add("post"); 
       REPOS_LIST.appendChild(REPOS_ELEMENT);

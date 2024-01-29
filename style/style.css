@@ -11,10 +11,10 @@ html, body {
 }
 h1 {
     font-size: 7vh;
-    position: fixed;
-    top: 75%;
-    left: 50%;
-    transform: translateX(-50%);
+}
+h2 {
+    font-size: 3.5vh;
+    height: 100%;
 }
 p {
     text-align: center;
@@ -35,6 +35,77 @@ p {
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #a7a7a7; 
+}
+#name {
+    position: fixed;
+    top: 75%;
+    left: 25%;
+    transform: translateX(-50%);
+}
+#leg {
+    position: fixed;
+    top: 78%;
+    left: 55%;
+    border-radius: 2vh;
+    width: 90vh;
+    height: 20%;
+    background-color: #1f0030;
+}
+#leg-vertical-line {
+    position: absolute;
+    height: 20vh;
+    padding: 2%;
+    top: 17%;
+    left: 32%;
+    height: 10vh;
+    border-left: 2px solid white;
+}
+#leg-title {
+    position: absolute;
+    left: 4%;
+    top: 2%;
+}
+#leg-items {
+    position: relative;
+    top: 7%;
+}
+#leg p {
+    text-align: left;
+    margin: 0; 
+    left: 37%;
+    margin-top: -3%;
+    font-size: 2.4vh;
+    font-weight: lighter;
+}
+#leg-color-projetos-publicos {
+    position: absolute;
+    border-radius: 100%;
+    border-style: solid;
+    height: 2.5vh;
+    width: 2.5vh;
+    left: 60%;
+    top: 26%;  
+    background-color: #00091a;
+}
+#leg-color-freelances-publicos {
+    position: absolute;
+    border-radius: 100%;
+    border-style: solid;
+    height: 2.5vh;
+    width: 2.5vh;
+    left: 63%;
+    top: 54%;  
+    background-color: #002004;
+}
+#leg-color-freelances-privados {
+    position: absolute;
+    border-radius: 100%;
+    border-style: solid;
+    height: 2.5vh;
+    width: 2.5vh;
+    left: 63%;
+    top: 82.5%;  
+    background-color: #1d1200;
 }
 #user-avatar {
     margin-top: 4vh;
@@ -145,7 +216,7 @@ a:link {
     font-weight: lighter;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 1000px) {
     #repositorios-post:hover {
         background-color: #1f0030;
         width: 50vh;
@@ -169,7 +240,63 @@ a:link {
         position: relative;
     }
 }
-@media (max-width: 450px) {
+@media (max-width: 1000px) {
+    html, body {
+        background-color: rgb(14, 0, 11);
+    }
+    p {
+        font-size: 2vh;
+    }
+    #name {
+        position: absolute;
+        top: 4%;
+        left: 17vh;
+        transform: none;
+        font-size: 4vh;
+    }
+    .post {
+        height: 50vh;
+    }
+    .repos-list {
+        margin-top: 8vh;
+    }
+    #repositorios-post {
+        position: relative;
+        width: 24vh;
+        height: 40vh;
+        background-color: rgb(24, 0, 20);
+    }
+    #freelances-public-post {
+        position: relative;
+        width: 24vh;
+        height: 40vh;
+        background-color: rgb(24, 0, 20);
+    }
+    #freelances-private-post {
+        position: relative;
+        width: 24vh;
+        height: 40vh;
+        background-color: rgb(24, 0, 20);
+    }
+    #repositorios-img {
+        width: 5.5vh;
+    }
+    #repositorios-link {
+        font-size: 2vh;
+        font-weight: bolder;
+    }
+    #freelance-name {
+        top: 4vh;
+        font-size: 2vh;
+        font-weight: bolder;
+    }
+    #repositorios-descricao {
+        position: relative;
+        width: 20vh;
+        height: 15vh;
+        top: -14%;
+        left: 8%;
+    }
     #repositorios-obs {
         color: rgb(255, 255, 255);
         position: absolute;
@@ -178,10 +305,37 @@ a:link {
         left: 50%;
         transform: translateX(-50%);
     }
-    html, body {
-        background-color: rgb(14, 0, 11);
+    #repositorios-obs-public {
+        color: rgb(255, 255, 255);
+        font-weight: lighter;
+        bottom: 4vh;    
     }
-    #repositorios-post {
-        background-color: rgb(24, 0, 20);
+    #leg {
+        top: 64%;
+        left: 2%;
+        width: 95%;
+        height: 28%;
+    }
+    #leg-vertical-line {
+        border-left: none;
+    }
+    #leg-items {
+        top: 6vh;
+        left: -12vh;
+    }
+    #leg-color-projetos-publicos {
+        top: 5vh;
+        left: auto;
+        right: 1vh;
+    }
+    #leg-color-freelances-publicos {
+        top: 11.5vh;
+        left: auto;
+        right: -1.5vh;
+    }
+    #leg-color-freelances-privados {
+        top: 18vh;
+        left: auto;
+        right: -1.5vh;
     }
 }
