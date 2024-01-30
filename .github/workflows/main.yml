@@ -34,7 +34,7 @@ jobs:
             - name: Configurando o Git
               run: 
                 git config --global user.email "action@github.com"
-                git config --global user.name "GitHub Action"
+                git config --global user.name "<>"
             - name: Adicionando as alterações    
               run:
                 git add data/repositorios-data.json
@@ -45,4 +45,4 @@ jobs:
               continue-on-error: true
             - name: Push para o Repositório
               run:
-                git push
+                git push origin main
