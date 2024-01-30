@@ -31,10 +31,18 @@ jobs:
                   GITHUB_TOKEN: ${{secrets.TOKEN_GITHUB}}
                   GITHUB_USERNAME: ${{secrets.USERNAME_GITHUB}}
 
-            - name: Fazendo o commit dos novos dados
+            - name: Configurando o Git
               run: 
                 git config --local user.email "action@github.com"
                 git config --local user.name "GitHub Action"
+            - name: Adicionando as alterações    
+              run:
                 git add data/repositorios-data.json
-                git commit -m "Atualizando o arquivo de dados JSON"
+            - name: Fazendo o commit  
+              run:
+                git commit -m "Atualizando o arquivo de dados JSON" || echo "Nada novo para commitar"
+
+              continue-on-error: true
+            - name: Push para o Repositório
+              run:
                 git push
