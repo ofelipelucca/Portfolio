@@ -21,10 +21,20 @@ jobs:
                 node-version: 20
                 
             - name: Instalando as dependencias
-              run: npm ci
+              run: 
+                npm ci
               
             - name: Rodando o codigo
-              run: node src/axios-get-repos.js
+              run:
+                node src/axios-get-repos.js
               env:
                   GITHUB_TOKEN: ${{secrets.TOKEN_GITHUB}}
                   GITHUB_USERNAME: ${{secrets.USERNAME_GITHUB}}
+
+            - name: Fazendo o commit dos novos dados
+              run: 
+                git config --local user.email "action@github.com"
+                git config --local user.name "GitHub Action"
+                git add data/repositorios-data.json
+                git commit -m "Atualizando o arquivo de dados JSON"
+                git push
