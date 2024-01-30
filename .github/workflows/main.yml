@@ -31,18 +31,6 @@ jobs:
                   GITHUB_TOKEN: ${{secrets.TOKEN_GITHUB}}
                   GITHUB_USERNAME: ${{secrets.USERNAME_GITHUB}}
 
-            - name: Configurando o Git
-              run: 
-                git config --global user.email "action@github.com"
-                git config --global user.name "<>"
-            - name: Adicionando as alterações    
-              run:
-                git add data/repositorios-data.json
-            - name: Fazendo o commit  
-              run:
-                git commit -m "Atualizando o arquivo de dados JSON" || echo "Nada novo para commitar"
-
-              continue-on-error: true
-            - name: Push para o Repositório
-              run:
-                git push origin main
+            - uses: stefanzweifel/git-auto-commit-action@v5
+              with:
+                commit_message: Commit de novos dados dos repositórios
