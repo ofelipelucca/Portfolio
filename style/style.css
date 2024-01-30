@@ -312,10 +312,10 @@ a:link {
         bottom: 4vh;    
     }
     #leg {
-        top: 67%;
-        left: 2%;
-        width: 95%;
-        height: 28%;
+        top: 63vh;
+        left: 1.5vh;
+        width: 39vh;
+        height: 30vh;
     }
     #leg-vertical-line {
         border-left: none;
@@ -326,17 +326,17 @@ a:link {
     }
     #leg-color-projetos-publicos {
         top: 5vh;
-        left: 40vh;
+        left: 35.5vh;
         right: auto;
     }
     #leg-color-freelances-publicos {
         top: 11.5vh;
-        left: 42.5vh;
+        left: 38.5vh;
         right: auto;
     }
     #leg-color-freelances-privados {
         top: 18vh;
-        left: 42.5vh;
+        left: 38.5vh;
         right: auto;
     }
 }
