@@ -264,19 +264,19 @@ a:link {
         position: relative;
         width: 24vh;
         height: 40vh;
-        background-color: rgb(24, 0, 20);
+        background-color: #000309;
     }
     #freelances-public-post {
         position: relative;
         width: 24vh;
         height: 40vh;
-        background-color: rgb(24, 0, 20);
+        background-color: #000901;
     }
     #freelances-private-post {
         position: relative;
         width: 24vh;
         height: 40vh;
-        background-color: rgb(24, 0, 20);
+        background-color: #090600;
     }
     #repositorios-img {
         width: 5.5vh;
@@ -288,12 +288,13 @@ a:link {
     #freelance-name {
         top: 4vh;
         font-size: 2vh;
+        margin-left: 19%;
         font-weight: bolder;
     }
     #repositorios-descricao {
         position: relative;
         width: 20vh;
-        height: 15vh;
+        height: 20vh;
         top: -14%;
         left: 8%;
     }
@@ -325,17 +326,17 @@ a:link {
     }
     #leg-color-projetos-publicos {
         top: 5vh;
-        left: auto;
-        right: 1vh;
+        left: 40vh;
+        right: auto;
     }
     #leg-color-freelances-publicos {
         top: 11.5vh;
-        left: auto;
-        right: -1.5vh;
+        left: 42.5vh;
+        right: auto;
     }
     #leg-color-freelances-privados {
         top: 18vh;
-        left: auto;
-        right: -1.5vh;
+        left: 42.5vh;
+        right: auto;
     }
 }
