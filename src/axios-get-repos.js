@@ -7,7 +7,8 @@ const axios = require('axios');
 // Fazendo a requisição das informações de todos os meus repositórios públicos
 axios.get(`https://api.github.com/users/${GITHUB_USERNAME}/repos?type=all&sort=updated&direction=desc`, {
     headers: {
-        'Authorization': `token ${GITHUB_TOKEN}`
+        'Authorization': `token ${GITHUB_TOKEN}`,
+        'Cache-Control': 'no-cache'
     }
 })
 .then(response => {
