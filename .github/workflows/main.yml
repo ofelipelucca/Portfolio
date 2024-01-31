@@ -6,7 +6,7 @@ on:
             - main
             
     schedule:
-        - cron: '0 0 */2 * *'
+        - cron: '0 0 */1 * *'
 
 jobs:
     build:
@@ -30,7 +30,3 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{secrets.TOKEN_GITHUB}}
                   GITHUB_USERNAME: ${{secrets.USERNAME_GITHUB}}
-
-            - uses: stefanzweifel/git-auto-commit-action@v5
-              with:
-                commit_message: Commit de novos dados dos repositórios
