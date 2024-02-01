@@ -9,15 +9,6 @@
     "public": true
   },
   {
-    "name": "AgendaPDS2",
-    "description": "Projeto de Programação e Desenvolvimento de Software 2, um gerenciador de tarefas!",
-    "created_at": "2024-01-27T02:12:33Z",
-    "updated_at": "2024-01-27T02:12:33Z",
-    "stargazers_count": 0,
-    "language": null,
-    "public": true
-  },
-  {
     "name": "JumpKing-Jumping-in-Real-Life",
     "description": "Uma aplicação que permite usar seus movimentos, capturados através da webcam, para jogar jogos. Criado com C++ e a biblioteca OpenCV, adaptado para jogar JumpKing",
     "created_at": "2024-01-22T21:04:57Z",
