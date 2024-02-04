@@ -11,6 +11,9 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
+        permissions:
+          contents: write
+
         steps:
             - name: Checkout repositorio
               uses: actions/checkout@v2
@@ -30,3 +33,7 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{secrets.TOKEN_GITHUB}}
                   GITHUB_USERNAME: ${{secrets.USERNAME_GITHUB}}
+            
+            - uses: stefanzweifel/git-auto-commit-action@v5
+              with:
+                commit_message: Fazendo auto-commit das alterções
