@@ -1,7 +1,7 @@
 [
     {
       "name": "TwitchPlays",
-      "description": "Uma aplicação em Node.JS que permite o chat da Twitch jogar jogos em conjuntos",
+      "description": "Uma aplicação em Node.JS que permite o chat da Twitch jogar jogos em conjunto",
       "created_at": "2023-12-11T15:00:00Z",
       "updated_at": "2024-01-17T20:30:00Z",
       "language": "Node.JS",
