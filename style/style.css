@@ -1,14 +1,28 @@
 html, body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background: linear-gradient(-45deg, #111111, #000000, #090008);
-    background-size: auto;
+    font-weight: bold;
+    background: linear-gradient(45deg, #99e6ff, #8aadff, #a7cce7, #0099ff);
+    background-size: 900% 800%;
     margin: 0;
     padding: 0;
     width: auto;
     height: 100%;
     color: white;
     user-select: none;
+    animation: gradient 15s ease infinite;
 }
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+  
 h1 {
     font-size: 7vh;
 }
@@ -18,7 +32,7 @@ h2 {
 }
 p {
     text-align: center;
-    font-size: 2.4vh;
+    font-size: 2.6vh;
     font-weight: lighter;
     padding-top: 5vh;
     position: relative;
@@ -30,11 +44,15 @@ p {
     background: none; 
 }
 ::-webkit-scrollbar-thumb {
+    cursor: grab;
     background: #ffffff;
     border-radius: 30vh;
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #a7a7a7; 
+}
+::-webkit-scrollbar-thumb:active {
+    cursor: grabbing;
 }
 #name {
     position: fixed;
@@ -46,10 +64,20 @@ p {
     position: fixed;
     top: 78%;
     left: 55%;
-    border-radius: 2vh;
     width: 90vh;
-    height: 20%;
-    background-color: #1f0030;
+    height: 22%;
+    z-index: 1;
+}
+#leg-bg {
+    position: absolute;
+    top: -10%;
+    width: 90vh;
+    height: 100%;
+    border-radius: 1vh;
+    background-color: rgba(255, 255, 255, 0.582);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: -1;
 }
 #leg-vertical-line {
     position: absolute;
@@ -85,7 +113,7 @@ p {
     width: 2.5vh;
     left: 60%;
     top: 26%;  
-    background-color: #00091a;
+    background-color: rgba(231, 186, 255, 1);
 }
 #leg-color-freelances-publicos {
     position: absolute;
@@ -95,7 +123,7 @@ p {
     width: 2.5vh;
     left: 63%;
     top: 54%;  
-    background-color: #002004;
+    background-color: rgba(186, 226, 255, 1);
 }
 #leg-color-freelances-privados {
     position: absolute;
@@ -105,7 +133,7 @@ p {
     width: 2.5vh;
     left: 63%;
     top: 82.5%;  
-    background-color: #1d1200;
+    background-color: rgba(255, 163, 163, 1);
 }
 #user-avatar {
     margin-top: 4vh;
@@ -113,6 +141,7 @@ p {
     width: 10vh;
     border-radius: 1.5vh;
     position: absolute;
+    z-index: 1;
     transition: 0.4s;
 }
 #repos {
@@ -141,6 +170,7 @@ p {
     word-wrap: break-word;
     overflow: hidden;
     text-overflow: ellipsis;
+    z-index: 1;
 }
 .post:active {
     background-color: rgb(26, 1, 39);
@@ -150,13 +180,15 @@ p {
     text-decoration: none;
 }
 #repositorios-post {
-    background-color: #000309;
+    background-color: rgba(255, 255, 255, 0.582);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 #freelances-public-post {
-    background-color: #000901;
+    background-color: rgba(255, 255, 255, 0.582);
 }
 #freelances-private-post {
-    background-color: #090600;
+    background-color: rgba(255, 255, 255, 0.582);
 }
 #repositorios-img {
     margin-left: 1vh;
@@ -195,7 +227,7 @@ a:link {
 #repositorios-obs {
     position: absolute;
     bottom: 30px;
-    color: #000309;
+    color: rgb(255, 255, 255, 0.582);
     font-weight: bolder;
     width: 100%;
     left: -0.23%;
@@ -203,7 +235,7 @@ a:link {
 #repositorios-obs-public {
     position: absolute;
     bottom: 30px;
-    color: #000901;
+    color: rgba(255, 255, 255, 1);
     font-weight: bolder;
     width: 100%;
     left: -0.23%;
@@ -218,19 +250,26 @@ a:link {
 
 @media (min-width: 1000px) {
     #repositorios-post:hover {
-        background-color: #1f0030;
+        background-color: rgba(231, 186, 255, 0.582);
+        backdrop-filter: blur(4px);
+        color: white;
+        -webkit-backdrop-filter: blur(4px);
         width: 50vh;
         text-wrap: wrap;
         padding-left: 2%;
     }
     #freelances-public-post:hover {
-        background-color: #1f0030;
+        background-color: rgba(186, 226, 255, 0.582);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
         width: 50vh;
         text-wrap: wrap;
         padding-left: 2%;
     }
     #freelances-private-post:hover {
-        background-color: #1f0030;
+        background-color: rgba(255, 163, 163, 0.582);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
         width: 50vh;
         text-wrap: wrap;
         padding-left: 2%;
@@ -238,6 +277,41 @@ a:link {
     #user-avatar:hover {
         width: 15vh;
         position: relative;
+    }
+
+    #img-bg-big-engrenagem {
+        position: fixed;
+        left: 50%;
+        top: 40%;
+        z-index: 0;
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+        width: 170vh;
+        opacity: 0.4;
+        animation: row infinite;
+        animation-duration: 100s;
+    }
+
+    #img-bg-medio-engrenagem {
+        position: fixed;
+        left: -30%;
+        top: -60%;
+        z-index: 0;
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+        width: 130vh;
+        opacity: 0.4;
+        animation: row infinite;
+        animation-duration: 100s;
+    }
+
+    @keyframes row {
+        0% {
+            transform: rotateZ(0deg);
+        }
+        100% {
+            transform: rotateZ(360deg);
+        }
     }
 }
 @media (max-width: 1000px) {
@@ -251,6 +325,7 @@ a:link {
         position: absolute;
         top: 4%;
         left: 17vh;
+        z-index: 1;
         transform: none;
         font-size: 4vh;
     }
@@ -264,19 +339,19 @@ a:link {
         position: relative;
         width: 24vh;
         height: 40vh;
-        background-color: #000309;
+        background-color: rgba(231, 186, 255, 0.582);
     }
     #freelances-public-post {
         position: relative;
         width: 24vh;
         height: 40vh;
-        background-color: #000901;
+        background-color: rgba(186, 226, 255, 0.582);;
     }
     #freelances-private-post {
         position: relative;
         width: 24vh;
         height: 40vh;
-        background-color: #090600;
+        background-color: rgba(255, 163, 163, 0.582);
     }
     #repositorios-img {
         width: 5.5vh;
@@ -312,10 +387,14 @@ a:link {
         bottom: 4vh;    
     }
     #leg {
-        top: 63vh;
+        top: 67vh;
         left: 1.5vh;
-        width: 39vh;
-        height: 30vh;
+        width: 40vh;
+        height: 32vh;
+    }
+    #leg-bg {
+        width: 100%;
+        height: 32vh;
     }
     #leg-vertical-line {
         border-left: none;
@@ -338,5 +417,38 @@ a:link {
         top: 18vh;
         left: 38.5vh;
         right: auto;
+    }
+
+    #img-bg-big-engrenagem {
+        position: fixed;
+        width: 100vh;
+        left: 30%;
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+        opacity: 0.4;
+        animation: row infinite;
+        animation-duration: 100s;
+    }
+
+    #img-bg-medio-engrenagem {
+        position: fixed;
+        width: 100vh;
+        top: -60%;
+        left: -80%;
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+        opacity: 0.4;
+        z-index: 0;
+        animation: row infinite;
+        animation-duration: 500s;
+    }
+
+    @keyframes row {
+        0% {
+            transform: rotateZ(0deg);
+        }
+        100% {
+            transform: rotateZ(360deg);
+        }
     }
 }
