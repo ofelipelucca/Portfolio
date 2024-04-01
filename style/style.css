@@ -288,6 +288,7 @@ a:link {
         -webkit-filter: blur(8px);
         width: 170vh;
         opacity: 0.4;
+        pointer-events: none;
         animation: row infinite;
         animation-duration: 100s;
     }
@@ -301,6 +302,7 @@ a:link {
         -webkit-filter: blur(8px);
         width: 130vh;
         opacity: 0.4;
+        pointer-events: none;
         animation: row infinite;
         animation-duration: 100s;
     }
