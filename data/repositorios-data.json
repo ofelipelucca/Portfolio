@@ -1,20 +1,20 @@
 [
   {
+    "name": "Twitch-Tac-Toe-JS",
+    "description": "Um jogo web onde é possível se conectar à um chat da Twitch e jogar TicTacToe (jogo da velha) com os viewers por meio de comandos. Feito com HTML, CSS, JavaScript, React, Redux",
+    "created_at": "2024-04-03T21:39:37Z",
+    "updated_at": "2024-04-03T21:39:38Z",
+    "stargazers_count": 0,
+    "language": null,
+    "public": true
+  },
+  {
     "name": "Portfolio-Dashboard-JS",
     "description": "Um dashboard com todos os meus repositórios e projetos freelances. Feito com HTML, CSS e JavaScript",
     "created_at": "2023-04-03T17:03:24Z",
     "updated_at": "2024-03-31T19:20:48Z",
     "stargazers_count": 0,
     "language": "CSS",
-    "public": true
-  },
-  {
-    "name": "Twitch-Tac-Toe-JS",
-    "description": "Um site de jogos interativos com o chat da Twitch, feito com JavaScript.",
-    "created_at": "2024-03-06T17:39:05Z",
-    "updated_at": "2024-03-29T17:37:18Z",
-    "stargazers_count": 0,
-    "language": "JavaScript",
     "public": true
   },
   {
