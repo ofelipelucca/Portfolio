@@ -1,11 +1,11 @@
 [
   {
-    "name": "Twitch-Tac-Toe-JS",
+    "name": "TwitchTacToe-JS",
     "description": "Um jogo web onde é possível se conectar à um chat da Twitch e jogar TicTacToe (jogo da velha) com os viewers por meio de comandos. Feito com HTML, CSS, JavaScript, React, Redux",
-    "created_at": "2024-04-03T21:39:37Z",
-    "updated_at": "2024-04-03T21:39:38Z",
+    "created_at": "2024-04-06T19:29:39Z",
+    "updated_at": "2024-04-07T00:21:18Z",
     "stargazers_count": 0,
-    "language": null,
+    "language": "JavaScript",
     "public": true
   },
   {
