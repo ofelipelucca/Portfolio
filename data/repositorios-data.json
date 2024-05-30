@@ -1,20 +1,20 @@
 [
   {
+    "name": "Portfolio-Dashboard-JS",
+    "description": "Um dashboard com todos os meus repositórios e projetos freelances. Feito com HTML, CSS e JavaScript",
+    "created_at": "2023-04-03T17:03:24Z",
+    "updated_at": "2024-05-29T00:45:07Z",
+    "stargazers_count": 0,
+    "language": "CSS",
+    "public": true
+  },
+  {
     "name": "AgendaPOO",
     "description": "Projeto de Programação Orientada a Objetos, um gerenciador de tarefas!",
     "created_at": "2024-05-20T01:02:00Z",
     "updated_at": "2024-05-29T00:39:55Z",
     "stargazers_count": 0,
     "language": "Python",
-    "public": true
-  },
-  {
-    "name": "Portfolio-Dashboard-JS",
-    "description": "Um dashboard com todos os meus repositórios e projetos freelances. Feito com HTML, CSS e JavaScript",
-    "created_at": "2023-04-03T17:03:24Z",
-    "updated_at": "2024-05-28T00:41:59Z",
-    "stargazers_count": 0,
-    "language": "CSS",
     "public": true
   },
   {
