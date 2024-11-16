@@ -1,20 +1,29 @@
 [
   {
-    "name": "Portfolio-Dashboard-JS",
-    "description": "Um dashboard com todos os meus repositórios e projetos freelances. Feito com HTML, CSS e JavaScript",
-    "created_at": "2023-04-03T17:03:24Z",
-    "updated_at": "2024-11-14T00:52:28Z",
+    "name": "ofelipelucca",
+    "description": "Meu README personalizado com widgets e SVG usando HTML e CSS",
+    "created_at": "2024-01-23T16:26:20Z",
+    "updated_at": "2024-11-15T22:59:36Z",
     "stargazers_count": 0,
-    "language": "CSS",
+    "language": null,
     "public": true
   },
   {
     "name": "CalculaFaltas",
     "description": "Uma calculadora de faltas para o ensino superior, com base em matérias com carga horária de 30, 60 e 90 horas.",
     "created_at": "2024-11-09T15:49:33Z",
-    "updated_at": "2024-11-09T16:02:25Z",
+    "updated_at": "2024-11-15T16:52:33Z",
     "stargazers_count": 0,
-    "language": null,
+    "language": "Python",
+    "public": true
+  },
+  {
+    "name": "Portfolio-Dashboard-JS",
+    "description": "Um dashboard com todos os meus repositórios e projetos freelances. Feito com HTML, CSS e JavaScript",
+    "created_at": "2023-04-03T17:03:24Z",
+    "updated_at": "2024-11-15T00:55:34Z",
+    "stargazers_count": 0,
+    "language": "CSS",
     "public": true
   },
   {
@@ -51,15 +60,6 @@
     "updated_at": "2024-03-08T02:35:44Z",
     "stargazers_count": 0,
     "language": "C++",
-    "public": true
-  },
-  {
-    "name": "ofelipelucca",
-    "description": "Meu README com minhas informações de contato, experiências e habilidades",
-    "created_at": "2024-01-23T16:26:20Z",
-    "updated_at": "2024-03-08T02:27:38Z",
-    "stargazers_count": 0,
-    "language": null,
     "public": true
   },
   {
