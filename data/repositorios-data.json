@@ -3,7 +3,16 @@
     "name": "Belleza-Pura-Site",
     "description": "Desafio landing page da empresa fictícia Belleza Pura",
     "created_at": "2024-11-30T04:08:05Z",
-    "updated_at": "2024-12-01T00:59:58Z",
+    "updated_at": "2024-12-01T19:18:55Z",
+    "stargazers_count": 0,
+    "language": "CSS",
+    "public": true
+  },
+  {
+    "name": "Portfolio-Dashboard-JS",
+    "description": "Um dashboard com todos os meus repositórios e projetos freelances. Feito com HTML, CSS e JavaScript",
+    "created_at": "2023-04-03T17:03:24Z",
+    "updated_at": "2024-12-01T01:06:10Z",
     "stargazers_count": 0,
     "language": "CSS",
     "public": true
@@ -15,15 +24,6 @@
     "updated_at": "2024-12-01T00:37:15Z",
     "stargazers_count": 0,
     "language": null,
-    "public": true
-  },
-  {
-    "name": "Portfolio-Dashboard-JS",
-    "description": "Um dashboard com todos os meus repositórios e projetos freelances. Feito com HTML, CSS e JavaScript",
-    "created_at": "2023-04-03T17:03:24Z",
-    "updated_at": "2024-11-30T00:55:04Z",
-    "stargazers_count": 0,
-    "language": "CSS",
     "public": true
   },
   {
