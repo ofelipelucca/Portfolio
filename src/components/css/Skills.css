@@ -1,7 +1,7 @@
 .skills-navbar nav {
     display: flex;
     position: relative;
-    width: 30vw;
+    width: fit-content;
     gap: 10px;
     justify-self: center;
     justify-content: space-evenly;
@@ -92,7 +92,6 @@ button {
 @media (max-width: 768px) {
 
     .skills-navbar nav {
-        width: 90vw;
         height: 6vh;
         gap: 0;
     }

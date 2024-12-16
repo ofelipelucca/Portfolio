@@ -88,13 +88,13 @@ function Projects() {
                       <p>projeto iniciado em {project.created_at}</p>
                     </div>
                     <div className="project-footer">
-                      <button className="project-button">
-                        <a href={`https://github.com/ofelipelucca/${project.name}`}
-                          target="_blank"
-                          rel="noopener noreferrer">
-                          ver mais
-                        </a>
-                      </button>
+                      {project.public ? <button className="project-button">
+                          <a href={`https://github.com/ofelipelucca/${project.name}`}
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            ver mais
+                          </a>
+                        </button> : <p>código fonte privado!</p>}                        
                       <p>{index + 1}/{projects.length}</p>
                     </div>
                   </div>
