@@ -7,7 +7,7 @@
     "stargazers_count": 0,
     "language": "CSS",
     "public": true,
-    "image": "src/assets/project-images/Portfolio-Dashboard-JS.png"
+    "image": "assets/project-images/Portfolio-Dashboard-JS.png"
   },
   {
     "name": "LibrasController",
@@ -17,7 +17,7 @@
     "stargazers_count": 1,
     "language": "Python",
     "public": true,
-    "image": "src/assets/project-images/Libras-Controller.png"
+    "image": "assets/project-images/Libras-Controller.png"
   },
   {
     "name": "ofelipelucca",
@@ -27,7 +27,7 @@
     "stargazers_count": 0,
     "language": null,
     "public": true,
-    "image": "src/assets/project-images/README.gif"
+    "image": "assets/project-images/README.gif"
   },
   {
     "name": "Canvas-3d-Earth-JS",
@@ -37,7 +37,7 @@
     "stargazers_count": 0,
     "language": "JavaScript",
     "public": true,
-    "image": "src/assets/project-images/Canvas-3d-Earth-JS.jpg"
+    "image": "assets/project-images/Canvas-3d-Earth-JS.jpg"
   },
   {
     "name": "Simple-Quiz-JS",
@@ -47,7 +47,7 @@
     "stargazers_count": 0,
     "language": "HTML",
     "public": true,
-    "image": "src/assets/project-images/Simple-Quiz-JS.jpg"
+    "image": "assets/project-images/Simple-Quiz-JS.jpg"
   },
   {
     "name": "AgendaPDS2",
@@ -57,7 +57,7 @@
     "stargazers_count": 0,
     "language": "C++",
     "public": true,
-    "image": "src/assets/project-images/AgendaPOO.jpg"
+    "image": "assets/project-images/AgendaPOO.jpg"
   },
   {
     "name": "JumpKing-Jumping-in-Real-Life",
@@ -67,7 +67,7 @@
     "stargazers_count": 2,
     "language": "C++",
     "public": true,
-    "image": "src/assets/project-images/JumpKing-Gameplay.gif"
+    "image": "assets/project-images/JumpKing-Gameplay.gif"
   },
   {
     "name": "RPG-Dice-Roller",
@@ -77,7 +77,7 @@
     "stargazers_count": 0,
     "language": "JavaScript",
     "public": true,
-    "image": "src/assets/project-images/RPG-Dice-Roller.jpg"
+    "image": "assets/project-images/RPG-Dice-Roller.jpg"
   },
   {
     "name": "Media-Binder-For-PC-CPP",
@@ -87,7 +87,7 @@
     "stargazers_count": 0,
     "language": "C++",
     "public": true,
-    "image": "src/assets/project-images/Media-Binder-For-PC-CPP.jpg"
+    "image": "assets/project-images/Media-Binder-For-PC-CPP.jpg"
   },
   {
     "name": "AgendaPOO",
@@ -97,7 +97,7 @@
     "stargazers_count": 1,
     "language": "Python",
     "public": true,
-    "image": "src/assets/project-images/AgendaPOO.jpg"
+    "image": "assets/project-images/AgendaPOO.jpg"
   },
   {
     "name": "TwitchTacToe-JS",
@@ -107,7 +107,7 @@
     "stargazers_count": 0,
     "language": "JavaScript",
     "public": true,
-    "image": "src/assets/project-images/TwitchTacToe-JS.png"
+    "image": "assets/project-images/TwitchTacToe-JS.png"
   },
   {
     "name": "CalculaFaltas",
@@ -117,6 +117,6 @@
     "stargazers_count": 0,
     "language": "Python",
     "public": true,
-    "image": "src/assets/project-images/CalculaFaltas.jpg"
+    "image": "assets/project-images/CalculaFaltas.jpg"
   }
 ]
