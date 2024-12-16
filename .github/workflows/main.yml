@@ -29,7 +29,7 @@ jobs:
               
             - name: Rodando o codigo
               run:
-                node src/main/fetchRepositories.js
+                node src/main/fetchRepositories.cjs
               env:
                   GITHUB_TOKEN: ${{secrets.TOKEN_GITHUB}}
                   GITHUB_USERNAME: ${{secrets.USERNAME_GITHUB}}
