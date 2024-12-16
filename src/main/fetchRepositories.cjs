@@ -65,6 +65,4 @@ const saveToFile = (filename, data) => {
   });
 };
 
-document.addEventListener('DOMContentLoaded', function() {
-  fetchRepositories();
-});
+fetchRepositories();
