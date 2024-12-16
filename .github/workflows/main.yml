@@ -1,4 +1,4 @@
-name: Porfolio Refresh DATA JSON 
+name: Porfolio Refresh Projects DATA JSON 
 
 on:
     push:
@@ -29,11 +29,11 @@ jobs:
               
             - name: Rodando o codigo
               run:
-                node src/axios-get-repos.js
+                node src/main/fetchRepositories.js
               env:
                   GITHUB_TOKEN: ${{secrets.TOKEN_GITHUB}}
                   GITHUB_USERNAME: ${{secrets.USERNAME_GITHUB}}
             
             - uses: stefanzweifel/git-auto-commit-action@v5
               with:
-                commit_message: Fazendo auto-commit das alterções
+                commit_message: Fazendo auto-commit dos novos repositorios

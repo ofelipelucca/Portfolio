@@ -1,15 +1,35 @@
 {
   "name": "portfolio",
-  "version": "1.0.0",
-  "description": "Meu portfolio com todos os meus repositorios publicos, expostos em um dashboard",
-  "main": "src/dashboard.js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "https://ofelipelucca.github.io/",
   "scripts": {
-    "start": "node axios-get-repos.js"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
-  "keywords": [],
-  "author": "Felipe Lucca T (ofelipelucca)",
-  "license": "ISC",
   "dependencies": {
-    "axios": "^1.6.5"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/react-slick": "^0.23.13",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.15.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "gh-pages": "^6.2.0",
+    "globals": "^15.12.0",
+    "typescript": "~5.6.2",
+    "typescript-eslint": "^8.15.0",
+    "vite": "^6.0.1"
   }
 }

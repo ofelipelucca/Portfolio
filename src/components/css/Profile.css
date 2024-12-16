@@ -1,0 +1,95 @@
+.profile-container {
+    margin: 10vh;
+    height: 100vh;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 4vh;
+}
+
+.academic-container {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    margin-right: 4vw;
+    justify-content: center;
+    align-items: center;
+    background-color: #5B3A29;
+    border-radius: 20px;
+}
+
+.academic-logo {
+    width: 25vw;
+    background-color: white;
+}
+
+.academic-info {
+    justify-items: center;
+}
+
+.academic-info h3,
+.academic-info p {
+    color: #EDE0D4;
+}
+
+.experience-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4vw;
+}
+
+.profile-card {
+    width: 94%;
+    min-height: 10vh;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 2vw;
+    background-color: #5B3A29;
+    align-content: center;
+    justify-items: center;
+    justify-self: center;
+}
+
+.profile-card h3,
+.profile-card p,
+.profile-card li {
+    color: #EDE0D4;
+}
+
+#portfolio-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 4vh;
+    height: fit-content;
+}
+
+#portfolio-info li {
+    font-size: 1em;
+    margin: 10px;
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        margin: 5vw;
+    }
+
+    .academic-container {
+        padding: 4vw;
+        text-align: center;
+    }
+
+    .profile-card h3 {
+        font-size: 5vw;
+    }
+
+    .profile-card h3,
+    .profile-card p {
+        text-align: center;
+    }
+}
