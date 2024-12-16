@@ -1,0 +1,39 @@
+name: Porfolio Refresh DATA JSON 
+
+on:
+    push:
+        branches:
+            - main
+            
+    schedule:
+        - cron: '0 0 */1 * *'
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        permissions:
+          contents: write
+
+        steps:
+            - name: Checkout repositorio
+              uses: actions/checkout@v2
+
+            - name: Fazendo setup no Node.js
+              uses: actions/setup-node@v1
+              with:
+                node-version: 20
+                
+            - name: Instalando as dependencias
+              run: 
+                npm ci
+              
+            - name: Rodando o codigo
+              run:
+                node src/axios-get-repos.js
+              env:
+                  GITHUB_TOKEN: ${{secrets.TOKEN_GITHUB}}
+                  GITHUB_USERNAME: ${{secrets.USERNAME_GITHUB}}
+            
+            - uses: stefanzweifel/git-auto-commit-action@v5
+              with:
+                commit_message: Fazendo auto-commit das alterções
