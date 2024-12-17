@@ -55,7 +55,7 @@ interface SkillsProps {
 }
 
 function Skills({ doScroll }: SkillsProps) {
-    const [selectedSkill, setSelectedSkill] = useState<string>("linguagens");
+    const [selectedSkill, setSelectedSkill] = useState<string>("frameworks");
     const [activePosition, setActivePosition] = useState<number>(0);
 
     const buttonRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({
