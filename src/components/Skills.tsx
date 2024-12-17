@@ -54,7 +54,7 @@ interface SkillsProps {
     doScroll: (value: number | string) => void;
 }
 
-function Skills({doScroll}: SkillsProps) {
+function Skills({ doScroll }: SkillsProps) {
     const [selectedSkill, setSelectedSkill] = useState<string>("linguagens");
     const [activePosition, setActivePosition] = useState<number>(0);
 
@@ -77,10 +77,10 @@ function Skills({doScroll}: SkillsProps) {
     }, [selectedSkill]);
 
     return (
-        <div>
+        <div className="skills-container">
             <h2>minhas skills</h2>
-            <div className="skills-container" id="skills">
-                <div className="skills-navbar">
+            <div>
+                <div className="skills-navbar" id="skills" >
                     <nav>
                         <div
                             className="nav-background"

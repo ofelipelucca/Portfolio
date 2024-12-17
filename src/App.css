@@ -27,7 +27,7 @@ h2 {
   align-self: center;
   justify-self: center;
   font-size: 5em;
-  padding: 0.6em;
+  padding: 0.1em;
 }
 
 h3 {
@@ -61,6 +61,26 @@ button {
 button:hover {
   color: bisque;
   background-color: #6a4330;
+}
+
+::-webkit-scrollbar {
+  width: 12px; 
+  height: 12px; 
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5B3A29;
+  border-radius: 10px; 
+  border: 2px solid #EDE0D4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6a4330;
 }
 
 .note {

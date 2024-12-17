@@ -1,6 +1,6 @@
 .profile-container {
     margin: 10vh;
-    height: 100vh;
+    height: fit-content;
 }
 
 .profile-section {
@@ -27,6 +27,7 @@
 }
 
 .academic-info {
+    padding: 1vw;
     justify-items: center;
 }
 
@@ -78,10 +79,14 @@
     .profile-container {
         margin: 5vw;
     }
-
+    
     .academic-container {
         padding: 4vw;
         text-align: center;
+    }
+
+    .academic-info {
+        padding: 0;
     }
 
     .profile-card h3 {

@@ -12,6 +12,7 @@ function Hero({doScroll}: HeroProps) {
           className="hero-profile-avatar" />
         <div className="hero-profile-content">
           <h1>opa, <br />meu nome é felipe lucca :)</h1>
+          <h2>desenvolvedor de software</h2>
           <div className="hero-profile-buttons">
             <button className="cta-button" id="cta-principal" onClick={() => doScroll("projects")}>ver projetos</button>
             <div className="hero-profile-contact">

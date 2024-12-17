@@ -41,6 +41,14 @@
 
 .hero-profile-content h1 {
     font-size: 3.5em;
+    margin: 0;
+}
+
+.hero-profile-content h2 {
+    font-size: 2em;
+    align-self: flex-start;
+    margin-top: 0;
+    margin-bottom: 5vh;
 }
 
 .hero-profile-contact {
@@ -109,17 +117,24 @@
         font-size: 7vw;
         text-align: center;
     }
+    
+    .hero-profile-content h2 {
+        font-size: 5vw;
+        align-self: center;
+        text-align: center;
+    }
 
     .hero-profile-buttons {
         display: flex;
-        flex-direction: row;
-        margin-top: 20vh;
+        flex-direction: column;
         width: 100%;
+        margin-top: 6vh;
         justify-content: space-between;
+        gap: 5vh;
     }
 
     .cta-button {
-        width: 60%;
+        width: 70%;
     }
 
     .svg-icon {
