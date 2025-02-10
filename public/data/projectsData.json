@@ -4,7 +4,7 @@
     "description": "Uma aplicação em Node.JS que permite o chat da Twitch jogar jogos em conjunto! Usando a API da Twitch, a aplicação recebe as mensagens enviadas em determinado chat, as interpreta e transforma em inputs de teclado e mouse o comando mais enviado dentro de um intervalo de N mensagens.",
     "created_at": "2023-12-11T15:00:00Z",
     "updated_at": "2024-01-17T20:30:00Z",
-    "language": "Node.JS",
+    "language": "JavaScript",
     "public": false,
     "image": "assets/project-images/TwitchPlays.png"
   },
@@ -18,8 +18,8 @@
     "image": "assets/project-images/TwitchPlaysRPG.jpg"
   },
   {
-    "name": "Portfolio-Dashboard-JS",
-    "description": "Um dashboard com todos os meus repositórios e projetos freelances. Feito com HTML, CSS e JavaScript",
+    "name": "Portfolio",
+    "description": "Portfólio pessoal desenvolvido com React e Vite, usando HTML, CSS, TypeScript e JavaScript. O site exibe meu perfil profissional, projetos atualizados automaticamente a partir do GitHub, minhas skills e formas de contato.",
     "created_at": "2023-04-03T17:03:24Z",
     "updated_at": "2024-11-29T00:56:31Z",
     "stargazers_count": 0,
@@ -29,7 +29,7 @@
   },
   {
     "name": "LibrasController",
-    "description": "Um software que reconhece gestos de libras e gestos customizados, e os transforma em um input de teclado ou mouse. (Python, TypeScript, JavaScript)",
+    "description": "Um software que reconhece gestos de libras e gestos customizados, e os transforma em um input de teclado ou mouse. (Python, TypeScript)",
     "created_at": "2024-11-16T20:03:08Z",
     "updated_at": "2024-11-24T21:50:05Z",
     "stargazers_count": 1,
