@@ -10,9 +10,7 @@ function Linguagens() {
                 <p>cpp;</p>
                 <p>c#;</p>
                 <p>python;</p>
-                <p>java;</p>
                 <p>typescript;</p>
-                <p>javascript;</p>
             </div>
         </div>
     );
@@ -24,10 +22,8 @@ function Frameworks() {
             <h3>frameworks</h3>
             <div className="skill-items">
                 <p>node.js;</p>
-                <p>.net;</p>
                 <p>react;</p>
                 <p>vue;</p>
-                <p>angular;</p>
                 <p>mediapipe;</p>
             </div>
         </div>
@@ -78,7 +74,7 @@ function Skills({ doScroll }: SkillsProps) {
 
     return (
         <div className="skills-container">
-            <h2>minhas skills</h2>
+            <h2>MINHAS SKILLS</h2>
             <div>
                 <div className="skills-navbar" id="skills" >
                     <nav>

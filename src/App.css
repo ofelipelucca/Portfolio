@@ -1,6 +1,7 @@
 :root {
   background-color: #F5F2E7;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {

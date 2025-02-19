@@ -3,13 +3,18 @@ import "./css/Projects.css";
 
 interface Project {
   name: string;
+  displayName: string;
   description: string;
-  created_at: string;
-  updated_at: string;
+  createdAt: string;
+  updatedAt: string;
   language: string;
   public: boolean;
-  has_link: boolean;
+  hasLink: boolean;
   image: string
+}
+
+const formatName = (name: string) => {
+  return name.replace(/-/g, " ");
 }
 
 const formatDate = (date: Date) => {
@@ -29,12 +34,13 @@ function Projects() {
         const res = await fetch("data/projectsData.json");
         const data: Project[] = await res.json();
 
-        data.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+        data.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
 
         const formattedData = data.map(project => ({
           ...project,
-          updated_at: formatDate(new Date(project.updated_at)),
-          created_at: formatDate(new Date(project.created_at))
+          displayName: formatName(project.name),
+          updatedAt: formatDate(new Date(project.updatedAt)),
+          createdAt: formatDate(new Date(project.createdAt))
         }));
 
         setProjects(formattedData);
@@ -56,7 +62,7 @@ function Projects() {
 
   return (
     <div className="projects-container" id="projects">
-      <h2>meus projetos</h2>
+      <h2>MEUS PROJETOS</h2>
       {projects.length > 0 ? (
         <div className="projects-slider-container">
           <button className="slider-button" id="prev-button" onClick={handlePrev}>
@@ -81,11 +87,11 @@ function Projects() {
                     />
                   </div>
                   <div className="project-infos">
-                    <h3>{project.name}</h3>
+                    <h3>{project.displayName}</h3>
                     <p className="project-description">{project.description}</p>
                     <div className="project-details">
                       <p>linguagem mais presente no projeto: {project.language ? project.language : "Markdown"}</p>
-                      <p>projeto iniciado em {project.created_at}</p>
+                      <p>projeto iniciado em {project.createdAt}</p>
                     </div>
                     <div className="project-footer">
                       {project.public ? <button className="project-button">

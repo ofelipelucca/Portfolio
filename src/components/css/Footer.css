@@ -10,3 +10,7 @@
 .footer-container button {
     background-color: transparent;
 }   
+
+.footer-container button:hover {
+    background-color: #5b3a29;
+}

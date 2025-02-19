@@ -7,7 +7,7 @@ interface FooterProps {
 function Footer({doScroll}: FooterProps) {
     return (
         <div className="footer-container">
-            <button onClick={() => doScroll(0)}>clica aqui pra voltar para o topo :)</button>
+            <button onClick={() => doScroll(0)}>clique aqui pra voltar para o topo :)</button>
         </div>
     );
 }
