@@ -15,9 +15,7 @@ const fetchRepositories = async () => {
 
     const existingProjects = loadExistingProjects('data/projectsData.json');
 
-    const newProjects = processRepositoryData(response.data, existingProjects);
-
-    const allProjects = [...existingProjects, ...newProjects];
+    const allProjects = [...existingProjects, ...existingProjects];
 
     saveToFile('data/projectsData.json', allProjects);
 
@@ -44,9 +42,9 @@ const processRepositoryData = (data, existingProjects) => {
     .map(repo => ({
       name: repo.name,
       description: repo.description,
-      created_at: repo.created_at,
-      updated_at: repo.updated_at,
-      stargazers_count: repo.stargazers_count,
+      createdAt: repo.created_at,
+      updatedAt: repo.updated_at,
+      stargazersCount: repo.stargazers_count,
       language: repo.language,
       public: true,
       image: null
