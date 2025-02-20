@@ -18,11 +18,10 @@ const fetchRepositories = async () => {
     });
 
     const publicProjects = processRepositoryData(response.data);
-    const privateProjects = loadExistingProjects('data/privateProjectsData.json');
+    const privateProjects = loadExistingProjects('../../public/data/privateProjectsData.json');
     const allProjects = [...publicProjects, ...privateProjects];
 
-    saveToFile('data/projectsData.json', allProjects);
-
+    saveToFile('../../public/data/projectsData.json', allProjects);
   } catch (error) {
     console.error('Erro ao buscar repositórios do GitHub:', error.response?.status, error.response?.data || error.message);
   }
@@ -30,9 +29,8 @@ const fetchRepositories = async () => {
 
 const loadExistingProjects = (filename) => {
   try {
-    if (!fs.existsSync(filename)) return [];
     const jsonData = fs.readFileSync(filename, 'utf8');
-    return JSON.parse(jsonData) || [];
+    return JSON.parse(jsonData);
   } catch (err) {
     console.error(`Erro ao processar ${filename}:`, err);
     return [];
@@ -49,7 +47,7 @@ const processRepositoryData = (data) => {
       stargazersCount: repo.stargazers_count,
       language: repo.language,
       public: true,
-      image: null
+      image: `assets/project-images/${repo.name}.jpg`
     }));
 };
 
