@@ -1,0 +1,20 @@
+[
+    {
+        "name": "TwitchPlays",
+        "description": "Uma aplicação em Node.JS que permite o chat da Twitch jogar jogos em conjunto! Usando a API da Twitch, a aplicação recebe as mensagens enviadas em determinado chat, as interpreta e transforma em inputs de teclado e mouse o comando mais enviado dentro de um intervalo de N mensagens.",
+        "createdAt": "2023-12-11T15:00:00Z",
+        "updatedAt": "2024-01-17T20:30:00Z",
+        "language": "JavaScript",
+        "public": false,
+        "image": "assets/project-images/TwitchPlays.png"
+    },
+    {
+        "name": "TwitchPlaysRPG",
+        "description": "Uma aplicação que utiliza Microsoft Azure para dublar automaticamente com IA, em pt-br, as mensagens de até 3 usuários no chat. A aplicação também possui integração com o websocket do OBS.",
+        "createdAt": "2024-01-19T15:00:00Z",
+        "updatedAt": "2024-01-19T15:00:00Z",
+        "language": "Python",
+        "public": false,
+        "image": "assets/project-images/TwitchPlaysRPG.jpg"
+    }
+]
