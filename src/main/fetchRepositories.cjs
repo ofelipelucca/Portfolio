@@ -1,6 +1,11 @@
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GITHUB_USERNAME = process.env.GITHUB_USERNAME;
 
+if (!GITHUB_TOKEN || !GITHUB_USERNAME) {
+  console.error("GITHUB_TOKEN ou GITHUB_USERNAME não definidos.");
+  process.exit(1);
+}
+
 const fs = require('fs');
 const axios = require('axios');
 
@@ -8,37 +13,34 @@ const fetchRepositories = async () => {
   try {
     const response = await axios.get(`https://api.github.com/users/${GITHUB_USERNAME}/repos?type=all&sort=updated&direction=desc`, {
       headers: {
-        'Authorization': `token ${GITHUB_TOKEN}`,
-        'Cache-Control': 'no-cache'
+        'Authorization': `token ${GITHUB_TOKEN}`
       }
     });
 
-    const existingProjects = loadExistingProjects('data/projectsData.json');
-
-    const allProjects = [...existingProjects, ...existingProjects];
+    const publicProjects = processRepositoryData(response.data);
+    const privateProjects = loadExistingProjects('data/privateProjectsData.json');
+    const allProjects = [...publicProjects, ...privateProjects];
 
     saveToFile('data/projectsData.json', allProjects);
 
   } catch (error) {
-    console.error('Erro na requisição ou ao processar dados:', error);
+    console.error('Erro ao buscar repositórios do GitHub:', error.response?.status, error.response?.data || error.message);
   }
 };
 
 const loadExistingProjects = (filename) => {
   try {
+    if (!fs.existsSync(filename)) return [];
     const jsonData = fs.readFileSync(filename, 'utf8');
     return JSON.parse(jsonData) || [];
   } catch (err) {
-    console.error('Erro ao ler o arquivo:', err);
+    console.error(`Erro ao processar ${filename}:`, err);
     return [];
   }
 };
 
-const processRepositoryData = (data, existingProjects) => {
-  const existingRepoNames = new Set(existingProjects.map(project => project.name));
-
+const processRepositoryData = (data) => {
   return data
-    .filter(repo => !existingRepoNames.has(repo.name)) 
     .map(repo => ({
       name: repo.name,
       description: repo.description,
@@ -56,10 +58,11 @@ const saveToFile = (filename, data) => {
 
   fs.writeFile(filename, jsonData, 'utf8', (err) => {
     if (err) {
-      console.error('Erro ao escrever no arquivo:', err);
-    } else {
-      console.log(`Os dados foram armazenados em ${filename} com sucesso!`);
+      console.error(`Erro ao escrever no arquivo ${filename}:`, err);
+      return;
     }
+
+    console.log(`Os dados foram armazenados em ${filename} com sucesso!`);
   });
 };
 
