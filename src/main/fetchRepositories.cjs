@@ -1,4 +1,4 @@
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const GITHUB_TOKEN    = process.env.GITHUB_TOKEN;
 const GITHUB_USERNAME = process.env.GITHUB_USERNAME;
 
 if (!GITHUB_TOKEN || !GITHUB_USERNAME) {
@@ -6,7 +6,7 @@ if (!GITHUB_TOKEN || !GITHUB_USERNAME) {
   process.exit(1);
 }
 
-const fs = require('fs');
+const fs    = require('fs');
 const axios = require('axios');
 
 const fetchRepositories = async () => {
@@ -17,13 +17,13 @@ const fetchRepositories = async () => {
       }
     });
 
-    const publicProjects = processRepositoryData(response.data);
+    const publicProjects  = processRepositoryData(response.data);
     const privateProjects = loadExistingProjects('../../public/data/privateProjectsData.json');
     const allProjects = [...publicProjects, ...privateProjects];
 
     saveToFile('../../public/data/projectsData.json', allProjects);
   } catch (error) {
-    console.error('Erro ao buscar repositórios do GitHub:', error.response?.status, error.response?.data || error.message);
+    console.error('Erro ao buscar repositórios do GitHub: ', error.response?.status, error.response?.data || error.message);
   }
 };
 
@@ -32,7 +32,7 @@ const loadExistingProjects = (filename) => {
     const jsonData = fs.readFileSync(filename, 'utf8');
     return JSON.parse(jsonData);
   } catch (err) {
-    console.error(`Erro ao processar ${filename}:`, err);
+    console.error(`Erro ao processar ${filename}: `, err);
     return [];
   }
 };
