@@ -11,13 +11,13 @@ function Hero({doScroll}: HeroProps) {
         <img src="https://avatars.githubusercontent.com/u/128730767?v=4" alt="Foto de Perfil do GitHub"
           className="hero-profile-avatar" />
         <div className="hero-profile-content">
-          <h1>opa, <br />meu nome é Felipe Lucca :)</h1>
+          <h1>opa, <br/>meu nome é felipe lucca :)</h1>
           <h2>desenvolvedor de software</h2>
           <div className="hero-profile-buttons">
             <button className="cta-button" id="cta-principal" onClick={() => doScroll("projects")}>ver projetos</button>
             <div className="hero-profile-contact">
-              <a href="https://github.com/ofelipelucca  " target="_blank" rel="noopener noreferrer"><img src="assets/icons/github.svg" alt="Github" className="svg-icon" /></a>
-              <a href="https://linkedin.com/in/felipe-lucca-taumaturgo-de-oliveira" target="_blank" rel="noopener noreferrer"><img src="assets/icons/linkedin.svg" alt="Linkedin" className="svg-icon" /></a>
+              <a href="https://github.com/ofelipelucca" title="Ir para o GitHub" target="_blank" rel="noopener noreferrer"><img src="assets/icons/github.svg" alt="Github" className="svg-icon" /></a>
+              <a href="https://linkedin.com/in/felipe-lucca-taumaturgo-de-oliveira" title="Ir para o LinkedIn" target="_blank" rel="noopener noreferrer"><img src="assets/icons/linkedin.svg" alt="Linkedin" className="svg-icon" /></a>
             </div>
           </div>
         </div>
