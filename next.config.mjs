@@ -1,6 +1,4 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === 'production'
-
 const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
@@ -13,10 +11,7 @@ const nextConfig = {
       },
     ],
   },
-
-  output: 'export',
   trailingSlash: true,
-  basePath: isProd ? '/<portfolio>' : '',
 }
 
-export default nextConfig
+export default nextConfig;
