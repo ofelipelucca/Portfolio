@@ -21,18 +21,28 @@ function PortfolioContent() {
   const [activeSection, setActiveSection] = useState<SectionId>("about")
   const ActiveComponent = SECTIONS[activeSection]
 
+  const NAVBAR_HEIGHT = 56
+  const FOOTER_HEIGHT = 32
+
   return (
-    <div className="flex flex-col h-dvh overflow-hidden bg-background">
+    <div className="relative min-h-screen bg-background">
       <Navbar
         activeSection={activeSection}
         onSectionChange={(id) => setActiveSection(id as SectionId)}
       />
 
-      <main className="flex-1 overflow-hidden">
+      <main
+        className="overflow-y-auto"
+        style={{
+          paddingTop: NAVBAR_HEIGHT,
+          paddingBottom: FOOTER_HEIGHT,
+          height: `calc(100vh - ${NAVBAR_HEIGHT + FOOTER_HEIGHT}px)`,
+        }}
+      >
         <ActiveComponent />
       </main>
 
-      <footer className="flex items-center justify-center h-8 border-t border-border text-[10px] md:text-xs text-muted-foreground bg-background">
+      <footer className="fixed bottom-0 left-0 w-full flex items-center justify-center h-8 border-t border-border text-[10px] md:text-xs text-muted-foreground bg-background z-50">
         <p>
           {"Felipe Lucca Taumaturgo, "} {new Date().getFullYear()}
         </p>

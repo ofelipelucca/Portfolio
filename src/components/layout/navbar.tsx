@@ -31,7 +31,7 @@ export function Navbar({ activeSection, onSectionChange }: NavbarProps) {
   }
 
   return (
-    <header className="flex items-center justify-between px-4 md:px-8 h-14 border-b border-border bg-background/80 backdrop-blur-sm">
+    <header className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 md:px-8 h-14 border-b border-border bg-background/80 backdrop-blur-sm">
       <nav className="flex items-center gap-1 md:gap-2">
         <span className="font-semibold text-sm md:text-base text-foreground mr-2 md:mr-6 tracking-tight font-mono">
           {"FL."}
