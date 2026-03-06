@@ -1,4 +1,4 @@
-name: Deploy Next.js
+name: Deploy Next.js to GitHub Pages
 
 on:
   workflow_run:
@@ -10,9 +10,10 @@ jobs:
   deploy:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
