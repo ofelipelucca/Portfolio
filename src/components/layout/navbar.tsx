@@ -1,5 +1,6 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import { useTheme } from "next-themes"
 import { useLocale } from "@/lib/locale-context"
 import { Sun, Moon, Globe } from "lucide-react"
@@ -14,6 +15,9 @@ const SECTION_IDS = ["about", "experience", "projects", "stack"] as const
 export function Navbar({ activeSection, onSectionChange }: NavbarProps) {
   const { theme, setTheme } = useTheme()
   const { locale, setLocale, t } = useLocale()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => setMounted(true), [])
 
   const sectionLabels: Record<string, string> = {
     about: t.nav.about,
@@ -62,17 +66,22 @@ export function Navbar({ activeSection, onSectionChange }: NavbarProps) {
             {locale === "pt-BR" ? "PT" : "EN"}
           </span>
         </button>
-        <button
-          onClick={handleToggleTheme}
-          className="p-1.5 text-muted-foreground hover:text-foreground rounded-md hover:bg-accent transition-colors cursor-pointer"
-          aria-label="Toggle theme"
-        >
-          {theme === "dark" ? (
-            <Sun className="h-3.5 w-3.5" />
-          ) : (
-            <Moon className="h-3.5 w-3.5" />
-          )}
-        </button>
+
+        {mounted ? (
+          <button
+            onClick={handleToggleTheme}
+            className="p-1.5 text-muted-foreground hover:text-foreground rounded-md hover:bg-accent transition-colors cursor-pointer"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? (
+              <Sun className="h-3.5 w-3.5" />
+            ) : (
+              <Moon className="h-3.5 w-3.5" />
+            )}
+          </button>
+        ) : (
+          <div className="w-3.5 h-3.5" />
+        )}
       </div>
     </header>
   )
