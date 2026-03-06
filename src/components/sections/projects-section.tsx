@@ -28,7 +28,8 @@ export function ProjectsSection() {
                     <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity shrink-0 mt-0.5" />
                   )}
                 </div>
-                <p className="text-[11px] md:text-xs text-muted-foreground leading-relaxed mb-2 line-clamp-2">
+                {/* Descrição sempre completa */}
+                <p className="text-[11px] md:text-xs text-muted-foreground leading-relaxed mb-2">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-1">
@@ -44,25 +45,21 @@ export function ProjectsSection() {
               </>
             )
 
-            if (hasUrl) {
-              return (
-                <a
-                  key={index}
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group p-3 md:p-4 rounded-lg border border-border bg-card hover:border-muted-foreground/50 transition-all block"
-                >
-                  {content}
-                </a>
-              )
-            }
+            const cardClasses =
+              "group p-3 md:p-4 rounded-lg border border-border bg-card hover:border-muted-foreground/50 transition-all block"
 
-            return (
-              <div
+            return hasUrl ? (
+              <a
                 key={index}
-                className="group p-3 md:p-4 rounded-lg border border-border bg-card hover:border-muted-foreground/50 transition-all"
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cardClasses}
               >
+                {content}
+              </a>
+            ) : (
+              <div key={index} className={cardClasses}>
                 {content}
               </div>
             )

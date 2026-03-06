@@ -55,15 +55,13 @@ export const translations = {
           name: "Sentinela",
           description:
             "Pipeline de dados para coleta, processamento e análise de sentimento de posts, compondo o monitoramento completo e personalizável de imagem de marcas em redes sociais.",
-          tags: ["Python", "Selenium", "SQLAlchemy", "ETL", "Análise de Sentimento"],
-          url: "https://github.com/ofelipelucca/Sentinela",
+          tags: ["Python", "Selenium", "SQLAlchemy", "ETL", "Análise de Sentimento"]
         },
         {
           name: "DeRole",
           description:
             "Projeto PWA mobile-first para marcar rolês e dividir despesas compartilhadas entre amigos.",
-          tags: ["TypeScript", "PWA", "Mobile-first"],
-          url: "https://github.com/ofelipelucca/DeRole",
+          tags: ["TypeScript", "PWA", "Mobile-first"]
         },
         {
           name: "LibrasController",
@@ -83,8 +81,7 @@ export const translations = {
           name: "Voz do Atleticano",
           description:
             "Frontend de aplicação web para torcedores, com visualização de dados e integração com APIs REST.",
-          tags: ["React", "Next.js", "TypeScript", "Recharts"],
-          url: "https://github.com/ofelipelucca/voz-do-atleticano-web",
+          tags: ["React", "Next.js", "TypeScript", "Recharts"]
         },
         {
           name: "JumpKing na Vida Real",
