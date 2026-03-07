@@ -6,7 +6,7 @@
 <div align="center">
   <br>
   <div>
-    <a href="https://ofelipelucca.github.io/Portfolio/" target="_blank" style="text-decoration:none;">
+    <a href="https://ofelipelucca.github.io/Portfolio/">
         <img src="https://img.shields.io/badge/-Clique%20aqui%20para%20acessar%20o%20portfólio-cccfff?style=for-the-badge&logo=web&logoColor=black" alt="Portfolio widget">
     </a>
   </div>
@@ -19,7 +19,9 @@
 
 <br>
 
-<img width="1365" height="631" alt="Print da tela inicial do Portfólio, versão 3.0.0" src="https://github.com/user-attachments/assets/9d5adb14-e039-4cff-a272-1471b7723b19" />
+<a href="https://ofelipelucca.github.io/Portfolio/">
+  <img width="1365" alt="Preview do Portfólio" src="https://github.com/user-attachments/assets/9d5adb14-e039-4cff-a272-1471b7723b19"/>
+</a>
 
 <br>
 <br>
