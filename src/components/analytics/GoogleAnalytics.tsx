@@ -13,7 +13,8 @@ export function GoogleAnalytics() {
 
     useEffect(() => {
         if (!isGaEnabled) return;
-        const url = pathname + searchParams.toString();
+        const query = searchParams.toString();
+        const url = pathname + (query ? `?${query}` : "");
         gtag.pageview(url);
     }, [pathname, searchParams, isGaEnabled]);
 
