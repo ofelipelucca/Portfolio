@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script";
 
@@ -10,13 +10,14 @@ export function GoogleAnalytics() {
     const pathname = usePathname();
     const searchParams = useSearchParams();
     const isGaEnabled = process.env.NODE_ENV === "production" && !!gtag.GA_MEASUREMENT_ID;
+    const [isGtagReady, setIsGtagReady] = useState(false);
 
     useEffect(() => {
-        if (!isGaEnabled) return;
+        if (!isGaEnabled || !isGtagReady) return;
         const query = searchParams.toString();
         const url = pathname + (query ? `?${query}` : "");
         gtag.pageview(url);
-    }, [pathname, searchParams, isGaEnabled]);
+    }, [pathname, searchParams, isGaEnabled, isGtagReady]);
 
     if (!isGaEnabled) return null;
 
@@ -26,7 +27,11 @@ export function GoogleAnalytics() {
                 src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_MEASUREMENT_ID}`}
                 strategy="afterInteractive"
             />
-            <Script id="gtag-init" strategy="afterInteractive">
+            <Script
+                id="gtag-init"
+                strategy="afterInteractive"
+                onReady={() => setIsGtagReady(true)}
+            >
                 {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
