@@ -74,13 +74,13 @@ function PortfolioContent() {
           content={t.hero.bio}
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://seu-portfolio.com" />
-        <meta property="og:image" content="https://seu-portfolio.com/og-image.png" />
+        <meta property="og:url" content="https://ofelipelucca.vercel.app" />
+        <meta property="og:image" content="https://ofelipelucca.vercel.app/og-image.png" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`Felipe Lucca Taumaturgo – ${t.hero.role}`} />
         <meta name="twitter:description" content={t.hero.bio} />
-        <meta name="twitter:image" content="https://seu-portfolio.com/og-image.png" />
+        <meta name="twitter:image" content="https://ofelipelucca.vercel.app/og-image.png" />
 
         <script
           type="application/ld+json"
@@ -89,7 +89,7 @@ function PortfolioContent() {
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Felipe Lucca Taumaturgo",
-              "url": "https://seu-portfolio.com",
+              "url": "https://ofelipelucca.vercel.app",
               "sameAs": [
                 "https://github.com/ofelipelucca",
                 "https://www.linkedin.com/in/felipe-lucca-taumaturgo-de-oliveira"
@@ -99,7 +99,7 @@ function PortfolioContent() {
           }}
         />
 
-        <link rel="canonical" href="https://seu-portfolio.com" />
+        <link rel="canonical" href="https://ofelipelucca.vercel.app" />
       </Head>
 
       <div className="relative min-h-screen bg-background">
