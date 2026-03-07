@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { LocaleProvider, useLocale } from "@/lib/locale-context"
 import { Navbar } from "@/components/layout/navbar"
 import { HeroSection } from "@/components/sections/hero-section"
@@ -30,7 +30,7 @@ function PortfolioContent() {
   const [activeSection, setActiveSection] = useState<SectionId>("about")
   const ActiveComponent = SECTIONS[activeSection]
 
-  const metadataMap: Record<SectionId, { title: string; description: string }> = {
+  const metadataMap: Record<SectionId, { title: string; description: string }> = useMemo(() => ({
     about: {
       title: `Felipe Lucca Taumaturgo | ${t.nav.about}`,
       description: t.hero.bio,
@@ -51,7 +51,7 @@ function PortfolioContent() {
       title: `Felipe Lucca Taumaturgo | ${t.nav.stack}`,
       description: t.stack.title,
     },
-  }
+  }), [t])
 
   useEffect(() => {
     const meta = metadataMap[activeSection]
@@ -59,28 +59,21 @@ function PortfolioContent() {
 
     const descTag = document.querySelector('meta[name="description"]')
     if (descTag) descTag.setAttribute("content", meta.description)
-  }, [activeSection, t])
+  }, [activeSection, metadataMap])
 
   return (
     <>
-      <div className="relative min-h-screen bg-background">
+      <div className="relative min-h-screen bg-background flex flex-col">
         <Navbar
           activeSection={activeSection}
           onSectionChange={(id) => setActiveSection(id as SectionId)}
         />
 
-        <main
-          className="overflow-y-auto"
-          style={{
-            paddingTop: 30,
-            paddingBottom: 32,
-            height: `calc(100vh - 88px)`,
-          }}
-        >
+        <main className="flex-1 overflow-y-auto pt-8 pb-8">
           <ActiveComponent />
         </main>
 
-        <footer className="fixed bottom-0 left-0 w-full flex items-center justify-center h-8 border-t border-border text-[10px] md:text-xs text-muted-foreground bg-background z-50">
+        <footer className="flex items-center justify-center h-8 border-t border-border text-[10px] md:text-xs text-muted-foreground bg-background">
           <p>{"Felipe Lucca Taumaturgo, "} {new Date().getFullYear()}</p>
         </footer>
       </div>
