@@ -1,7 +1,6 @@
-import { useLocale } from "@/lib/locale-context"
+import { translations } from "@/lib/i18n"
 
 export default function Head() {
-    const { t } = useLocale()
     return (
         <>
             <script
@@ -16,7 +15,7 @@ export default function Head() {
                             "https://github.com/ofelipelucca",
                             "https://www.linkedin.com/in/felipe-lucca-taumaturgo-de-oliveira"
                         ],
-                        jobTitle: t.hero.role
+                        jobTitle: translations["pt-BR"].hero.role
                     }),
                 }}
             />
