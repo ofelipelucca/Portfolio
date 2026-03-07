@@ -1,23 +1,33 @@
-<p align="center">
-  <h1>Portfólio Profissional - Felipe Lucca Taumaturgo</h1>
-
+<div align="center">
+  <h1>Portfólio Profissional - Felipe Lucca Taumaturgo de Oliveira</h1>
   <strong>Desenvolvedor Full Stack & Engenheiro de Dados, apresentando projetos, experiência e skills.</strong>
-</p>
+</div>
 
-<p align="center">
+<div align="center">
+  <br>
+  <div>
+    <a href="https://ofelipelucca.github.io/Portfolio/" target="_blank" style="text-decoration:none;">
+        <img src="https://img.shields.io/badge/-Clique%20aqui%20para%20acessar%20o%20portfólio-cccfff?style=for-the-badge&logo=web&logoColor=black" alt="Portfolio widget">
+    </a>
+  </div>
   <img src="https://img.shields.io/badge/Next.js-gray?logo=next.js&logoColor=000000" />
   <img src="https://img.shields.io/badge/React-gray?logo=react&logoColor=61DAFB" />
   <img src="https://img.shields.io/badge/TypeScript-gray?logo=typescript&logoColor=3178C6" />
   <img src="https://img.shields.io/badge/Tailwind-gray?logo=tailwindcss&logoColor=06B6D4" />
   <img src="https://img.shields.io/badge/Vercel-gray?logo=vercel&logoColor=000000" />
+</div>
 
----
+<br>
+
+<img width="1365" height="631" alt="Print da tela inicial do Portfólio, versão 3.0.0" src="https://github.com/user-attachments/assets/9d5adb14-e039-4cff-a272-1471b7723b19" />
+
+<br>
+<br>
 
 <div align="center">
-    <br><br>
-    <a href="https://ofelipelucca.github.io/Portfolio/" target="_blank" style="text-decoration:none;">
-        <img src="https://img.shields.io/badge/-Clique%20aqui%20para%20acessar%20o%20portfólio-cccfff?style=for-the-badge&logo=web&logoColor=black" alt="Portfolio widget">
-    </a>
+  <img src="https://img.shields.io/github/last-commit/ofelipelucca/portfolio" />
+  <img src="https://img.shields.io/github/issues/ofelipelucca/Portfolio" />
+  <img src="https://img.shields.io/github/actions/workflow/status/ofelipelucca/portfolio/build.yml?branch=main" />
 </div>
 
 ## Funcionalidades do Portfolio
@@ -49,14 +59,3 @@
 - **💻 GitHub:** [github.com/ofelipelucca](https://github.com/ofelipelucca)  
 
 ---
-
-## Status
-
-- Site hospedado no **Vercel**
-- Atualizações contínuas com novos projetos, melhorias de UI/UX e otimizações de desempenho  
-
----
-
-![GitHub last commit](https://img.shields.io/github/last-commit/ofelipelucca/portfolio)
-![GitHub](https://img.shields.io/github/license/ofelipelucca/portfolio)
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ofelipelucca/portfolio/build.yml?branch=main)
