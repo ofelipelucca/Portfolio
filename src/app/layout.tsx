@@ -1,13 +1,10 @@
-import { useEffect } from "react";
 import type { Metadata, Viewport } from "next"
-import { usePathname, useSearchParams } from "next/navigation";
 import { Inter, JetBrains_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
-import Script from "next/script";
 
 import { ThemeProvider } from "@/components/providers/theme-provider"
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics"
 import "./globals.css"
-import * as gtag from "@/lib/gtag"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -49,39 +46,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
-  useEffect(() => {
-    const url = pathname + searchParams.toString();
-    gtag.pageview(url);
-  }, [pathname, searchParams]);
-
   return (
     <html lang="pt-BR" suppressHydrationWarning >
-      {
-        process.env.NEXT_PUBLIC_GA_ID && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-              strategy="afterInteractive"
-            />
-            <Script id="gtag-init" strategy="afterInteractive">
-              {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
-                page_path: window.location.pathname,
-              });
-            `}
-            </Script>
-          </>
-        )
-      }
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >
+        <GoogleAnalytics />
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
