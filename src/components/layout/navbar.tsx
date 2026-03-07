@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState, useEffect } from "react"
 import { useTheme } from "next-themes"
@@ -44,11 +44,10 @@ export function Navbar({ activeSection, onSectionChange }: NavbarProps) {
           <button
             key={id}
             onClick={() => onSectionChange(id)}
-            className={`px-2 md:px-3 py-1.5 text-xs md:text-sm rounded-md transition-colors cursor-pointer ${
-              activeSection === id
-                ? "bg-primary text-primary-foreground font-medium"
-                : "text-muted-foreground hover:text-foreground hover:bg-accent"
-            }`}
+            className={`px-2 md:px-3 py-1.5 text-xs md:text-sm rounded-md transition-colors cursor-pointer ${activeSection === id
+              ? "bg-primary text-primary-foreground font-medium"
+              : "text-muted-foreground hover:text-foreground hover:bg-accent"
+              }`}
           >
             {sectionLabels[id]}
           </button>

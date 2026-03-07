@@ -1,8 +1,9 @@
-"use client"
+"use client";
 
 import { useEffect, useMemo, useState } from "react"
 import { LocaleProvider, useLocale } from "@/lib/locale-context"
 import { Navbar } from "@/components/layout/navbar"
+import { Footer } from "@/components/layout/footer"
 import { HeroSection } from "@/components/sections/hero-section"
 import { ExperienceSection } from "@/components/sections/experience-section"
 import { ProjectsSection } from "@/components/sections/projects-section"
@@ -69,13 +70,11 @@ function PortfolioContent() {
           onSectionChange={(id) => setActiveSection(id as SectionId)}
         />
 
-        <main className="flex-1 overflow-y-auto pt-8 pb-8">
+        <main className="flex-1 flex items-center justify-center overflow-y-auto pt-8 pb-8">
           <ActiveComponent />
         </main>
 
-        <footer className="flex items-center justify-center h-8 border-t border-border text-[10px] md:text-xs text-muted-foreground bg-background">
-          <p>{"Felipe Lucca Taumaturgo, "} {new Date().getFullYear()}</p>
-        </footer>
+        <Footer />
       </div>
     </>
   )
