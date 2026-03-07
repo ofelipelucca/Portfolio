@@ -2,7 +2,7 @@ export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || "";
 
 declare global {
     interface Window {
-        gtag: (...args: any[]) => void;
+        gtag: (command: 'config' | 'event' | 'set', targetId: string, params?: Record<string, unknown>) => void;
     }
 }
 
