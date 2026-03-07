@@ -2,11 +2,12 @@
 
 import { useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
-import * as gtag from "../../lib/gtag";
 import Script from "next/script";
 
+import * as gtag from "../../lib/gtag";
+
 export function GoogleAnalytics() {
-    if (process.env.NODE_ENV !== "production" || !process.env.NEXT_PUBLIC_GA_ID) return null;
+    if (process.env.NODE_ENV !== "production" || !gtag.GA_MEASUREMENT_ID) return null;
 
     const pathname = usePathname();
     const searchParams = useSearchParams();
@@ -19,7 +20,7 @@ export function GoogleAnalytics() {
     return (
         <>
             <Script
-                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+                src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_MEASUREMENT_ID}`}
                 strategy="afterInteractive"
             />
             <Script id="gtag-init" strategy="afterInteractive">
@@ -27,7 +28,7 @@ export function GoogleAnalytics() {
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
-                    gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+                    gtag('config', '${gtag.GA_MEASUREMENT_ID}', {
                         page_path: window.location.pathname,
                     });
                 `}
