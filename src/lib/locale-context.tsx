@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { createContext, useContext, useState, type ReactNode } from "react"
 import { type Locale, translations } from "./i18n"

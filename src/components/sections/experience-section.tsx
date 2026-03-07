@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useLocale } from "@/lib/locale-context"
 import { Briefcase } from "lucide-react"
