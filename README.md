@@ -10,7 +10,6 @@
   <img src="https://img.shields.io/badge/TypeScript-gray?logo=typescript&logoColor=3178C6" />
   <img src="https://img.shields.io/badge/Tailwind-gray?logo=tailwindcss&logoColor=06B6D4" />
   <img src="https://img.shields.io/badge/Vercel-gray?logo=vercel&logoColor=000000" />
-  <img src="https://img.shields.io/badge/Python-gray?logo=python&logoColor=3776AB" />
 
 ---
 
