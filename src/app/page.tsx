@@ -31,9 +31,6 @@ function PortfolioContent() {
   const [activeSection, setActiveSection] = useState<SectionId>("about")
   const ActiveComponent = SECTIONS[activeSection]
 
-  const NAVBAR_HEIGHT = 56
-  const FOOTER_HEIGHT = 32
-
   const metadataMap: Record<SectionId, { title: string; description: string }> = {
     about: {
       title: `Felipe Lucca Taumaturgo | ${t.nav.about}`,
@@ -111,9 +108,9 @@ function PortfolioContent() {
         <main
           className="overflow-y-auto"
           style={{
-            paddingTop: NAVBAR_HEIGHT,
-            paddingBottom: FOOTER_HEIGHT,
-            height: `calc(100vh - ${NAVBAR_HEIGHT + FOOTER_HEIGHT}px)`,
+            paddingTop: 30,
+            paddingBottom: 32,
+            height: `calc(100vh - 88px)`,
           }}
         >
           <ActiveComponent />
