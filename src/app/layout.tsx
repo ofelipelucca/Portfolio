@@ -19,12 +19,13 @@ export const metadata: Metadata = {
   description:
     "Portfolio de Felipe Lucca Taumaturgo - Desenvolvedor Full Stack e Engenheiro de Dados. Python, TypeScript, AWS, PostgreSQL.",
   icons: {
-    icon: [
-      {
-        url: "https://twemoji.maxcdn.com/v/latest/svg/1f920.svg",
-        media: "(prefers-color-scheme: light)",
-        type: "image/svg+xml"
-      },
+    icon: "/favicon.ico",
+    shortcut: "/favicon-32x32.png",
+    apple: "/apple-touch-icon.png",
+    other: [
+      { url: "/favicon-16x16.png", type: "image/png" },
+      { url: "/android-chrome-192x192.png", type: "image/png" },
+      { url: "/android-chrome-512x512.png", type: "image/png" },
     ],
   },
 }
