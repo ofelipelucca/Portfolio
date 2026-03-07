@@ -1,6 +1,6 @@
-# Portfólio Profissional - Felipe Lucca Taumaturgo
-
 <p align="center">
+  # Portfólio Profissional - Felipe Lucca Taumaturgo
+
   <strong>Desenvolvedor Full Stack & Engenheiro de Dados, apresentando projetos, experiência e skills.</strong>
 </p>
 
@@ -11,8 +11,6 @@
   <img src="https://img.shields.io/badge/Tailwind-gray?logo=tailwindcss&logoColor=06B6D4" />
   <img src="https://img.shields.io/badge/Vercel-gray?logo=vercel&logoColor=000000" />
   <img src="https://img.shields.io/badge/Python-gray?logo=python&logoColor=3776AB" />
-  <img src="https://img.shields.io/badge/AWS-gray?logo=amazon-aws&logoColor=FF9900" />
-</p>
 
 ---
 
@@ -38,7 +36,7 @@
 
 ---
 
-## 📬 Contato
+## Contato
 
 - **📧 Email:** felipe.lucca.t.oliveira@gmail.com  
 - **💼 LinkedIn:** [linkedin.com/in/felipe-lucca-taumaturgo-de-oliveira](https://www.linkedin.com/in/felipe-lucca-taumaturgo-de-oliveira)  
@@ -46,7 +44,7 @@
 
 ---
 
-## 🌟 Status
+## Status
 
 - Site hospedado no **Vercel**
 - Atualizações contínuas com novos projetos, melhorias de UI/UX e otimizações de desempenho  
