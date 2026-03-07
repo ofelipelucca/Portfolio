@@ -14,6 +14,13 @@
 
 ---
 
+<div align="center">
+    <br><br>
+    <a href="https://ofelipelucca.github.io/Portfolio/" target="_blank" style="text-decoration:none;">
+        <img src="https://img.shields.io/badge/-Clique%20aqui%20para%20acessar%20o%20portfólio-cccfff?style=for-the-badge&logo=web&logoColor=black" alt="Portfolio widget">
+    </a>
+</div>
+
 ## Funcionalidades do Portfolio
 
 - Perfil profissional detalhado  
