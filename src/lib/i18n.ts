@@ -61,13 +61,13 @@ export const translations = {
           name: "DeRole",
           description:
             "Projeto PWA mobile-first para marcar rolês e dividir despesas compartilhadas entre amigos.",
-          tags: ["TypeScript", "PWA", "Mobile-first"]
+          tags: ["TypeScript", "PWA", "Mobile-first", "Next.js", "React", "Tailwind"],
         },
         {
           name: "LibrasController",
           description:
             "Software que reconhece gestos de Libras e gestos customizados, transformando-os em inputs de teclado ou mouse.",
-          tags: ["Python", "OpenCV", "Electron", "React", "TypeScript"],
+          tags: ["Python", "OpenCV", "MediaPipe", "Electron", "React", "TypeScript"],
           url: "https://github.com/ofelipelucca/LibrasController",
         },
         {
@@ -101,15 +101,15 @@ export const translations = {
         },
         {
           name: "Frameworks & Libs",
-          items: ["Flask", "FastAPI", "Node.js", "React", "Next.js", "Vue.js", "Electron", "Selenium", "SQLAlchemy", "PySpark", "Pandas", "NumPy"],
+          items: ["Flask", "FastAPI", "Node.js", "React", "Next.js", "Vue.js", "Selenium", "SQLAlchemy", "PySpark", "Pandas", "NumPy"],
         },
         {
           name: "Dados & Banco",
-          items: ["PostgreSQL", "MySQL", "Redis", "ETL/ELT", "Arquitetura Medallion", "Modelagem de Dados", "Análise de Sentimento"],
+          items: ["PostgreSQL", "MySQL", "Redis", "ETL/ELT", "Medallion", "Modelagem", "Análise de Sentimento"],
         },
         {
           name: "Cloud & DevOps",
-          items: ["AWS Lambda", "AWS S3", "AWS SNS/SQS", "Azure Virtual Machines", "Azure Database", "Oracle Object Storage", "Git"],
+          items: ["AWS Lambda", "AWS S3", "AWS SNS/SQS", "Azure VM", "Azure DB", "Oracle Object Storage", "Git"],
         },
         {
           name: "Outros",
@@ -181,14 +181,14 @@ export const translations = {
           name: "DeRole",
           description:
             "Mobile-first PWA for scheduling hangouts and splitting shared expenses among friends.",
-          tags: ["TypeScript", "PWA", "Mobile-first"],
+          tags: ["TypeScript", "PWA", "Mobile-first", "Next.js", "React", "Tailwind"],
           url: "https://github.com/ofelipelucca/DeRole",
         },
         {
           name: "LibrasController",
           description:
             "Software that recognizes Brazilian Sign Language gestures and custom gestures, converting them into keyboard or mouse inputs.",
-          tags: ["Python", "OpenCV", "Electron", "React", "TypeScript"],
+          tags: ["Python", "OpenCV", "MediaPipe", "Electron", "React", "TypeScript"],
           url: "https://github.com/ofelipelucca/LibrasController",
         },
         {
@@ -223,15 +223,15 @@ export const translations = {
         },
         {
           name: "Frameworks & Libs",
-          items: ["Flask", "FastAPI", "Node.js", "React", "Next.js", "Vue.js", "Electron", "Selenium", "SQLAlchemy", "PySpark", "Pandas", "NumPy"],
+          items: ["Flask", "FastAPI", "Node.js", "React", "Next.js", "Vue.js", "Selenium", "SQLAlchemy", "PySpark", "Pandas", "NumPy"],
         },
         {
           name: "Data & Databases",
-          items: ["PostgreSQL", "MySQL", "Redis", "ETL/ELT", "Medallion Architecture", "Data Modeling", "Sentiment Analysis"],
+          items: ["PostgreSQL", "MySQL", "Redis", "ETL/ELT", "Medallion", "Modeling", "Sentiment Analysis"],
         },
         {
           name: "Cloud & DevOps",
-          items: ["AWS Lambda", "AWS S3", "AWS SNS/SQS", "Azure Virtual Machines", "Azure Database", "Oracle Object Storage", "Git"],
+          items: ["AWS Lambda", "AWS S3", "AWS SNS/SQS", "Azure VM", "Azure DB", "Oracle Object Storage", "Git"],
         },
         {
           name: "Other",
