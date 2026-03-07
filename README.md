@@ -1,5 +1,5 @@
 <p align="center">
-  # Portfólio Profissional - Felipe Lucca Taumaturgo
+  <h1>Portfólio Profissional - Felipe Lucca Taumaturgo</h1>
 
   <strong>Desenvolvedor Full Stack & Engenheiro de Dados, apresentando projetos, experiência e skills.</strong>
 </p>
