@@ -4,12 +4,10 @@ import Image from "next/image"
 import { useLocale } from "@/lib/locale-context"
 import { MapPin, Mail, Github, Linkedin, GraduationCap } from "lucide-react"
 
-const GITHUB_AVATAR_URL =
-  "https://avatars.githubusercontent.com/u/128730767?v=4"
+const GITHUB_AVATAR_URL = "https://avatars.githubusercontent.com/u/128730767?v=4"
 const EMAIL = "felipe.lucca.t.oliveira@gmail.com"
 const GITHUB_URL = "https://github.com/ofelipelucca"
-const LINKEDIN_URL =
-  "https://www.linkedin.com/in/felipe-lucca-taumaturgo-de-oliveira"
+const LINKEDIN_URL = "https://www.linkedin.com/in/felipe-lucca-taumaturgo-de-oliveira"
 
 export function HeroSection() {
   const { t } = useLocale()

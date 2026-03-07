@@ -1,7 +1,10 @@
 import type { Metadata, Viewport } from "next"
+import { Suspense } from "react"
 import { Inter, JetBrains_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+
 import { ThemeProvider } from "@/components/providers/theme-provider"
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics"
 import "./globals.css"
 
 const inter = Inter({
@@ -19,12 +22,13 @@ export const metadata: Metadata = {
   description:
     "Portfolio de Felipe Lucca Taumaturgo - Desenvolvedor Full Stack e Engenheiro de Dados. Python, TypeScript, AWS, PostgreSQL.",
   icons: {
-    icon: [
-      {
-        url: "https://twemoji.maxcdn.com/v/latest/svg/1f920.svg",
-        media: "(prefers-color-scheme: light)",
-        type: "image/svg+xml"
-      },
+    icon: "/favicon.ico",
+    shortcut: "/favicon-32x32.png",
+    apple: "/apple-touch-icon.png",
+    other: [
+      { url: "/favicon-16x16.png", type: "image/png" },
+      { url: "/android-chrome-192x192.png", type: "image/png" },
+      { url: "/android-chrome-512x512.png", type: "image/png" },
     ],
   },
 }
@@ -48,6 +52,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >
+        <Suspense fallback={null}>
+          <GoogleAnalytics />
+        </Suspense>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
