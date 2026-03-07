@@ -7,15 +7,17 @@ import Script from "next/script";
 import * as gtag from "../../lib/gtag";
 
 export function GoogleAnalytics() {
-    if (process.env.NODE_ENV !== "production" || !gtag.GA_MEASUREMENT_ID) return null;
-
     const pathname = usePathname();
     const searchParams = useSearchParams();
+    const isGaEnabled = process.env.NODE_ENV === "production" && !!gtag.GA_MEASUREMENT_ID;
 
     useEffect(() => {
+        if (!isGaEnabled) return;
         const url = pathname + searchParams.toString();
         gtag.pageview(url);
-    }, [pathname, searchParams]);
+    }, [pathname, searchParams, isGaEnabled]);
+
+    if (!isGaEnabled) return null;
 
     return (
         <>
