@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script";
 
-import * as gtag from "../../lib/gtag";
+import * as gtag from "@/lib/gtag";
 
 export function GoogleAnalytics() {
     const pathname = usePathname();
@@ -13,7 +13,8 @@ export function GoogleAnalytics() {
 
     useEffect(() => {
         if (!isGaEnabled) return;
-        const url = pathname + searchParams.toString();
+        const query = searchParams.toString();
+        const url = pathname + (query ? `?${query}` : "");
         gtag.pageview(url);
     }, [pathname, searchParams, isGaEnabled]);
 

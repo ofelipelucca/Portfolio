@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import Head from "next/head"
 import { LocaleProvider, useLocale } from "@/lib/locale-context"
 import { Navbar } from "@/components/layout/navbar"
 import { HeroSection } from "@/components/sections/hero-section"
@@ -30,9 +29,6 @@ function PortfolioContent() {
   const { t } = useLocale()
   const [activeSection, setActiveSection] = useState<SectionId>("about")
   const ActiveComponent = SECTIONS[activeSection]
-
-  const NAVBAR_HEIGHT = 56
-  const FOOTER_HEIGHT = 32
 
   const metadataMap: Record<SectionId, { title: string; description: string }> = {
     about: {
@@ -67,41 +63,6 @@ function PortfolioContent() {
 
   return (
     <>
-      <Head>
-        <meta property="og:title" content={`Felipe Lucca Taumaturgo – ${t.hero.role}`} />
-        <meta
-          property="og:description"
-          content={t.hero.bio}
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ofelipelucca.vercel.app" />
-        <meta property="og:image" content="https://ofelipelucca.vercel.app/og-image.png" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`Felipe Lucca Taumaturgo – ${t.hero.role}`} />
-        <meta name="twitter:description" content={t.hero.bio} />
-        <meta name="twitter:image" content="https://ofelipelucca.vercel.app/og-image.png" />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              "name": "Felipe Lucca Taumaturgo",
-              "url": "https://ofelipelucca.vercel.app",
-              "sameAs": [
-                "https://github.com/ofelipelucca",
-                "https://www.linkedin.com/in/felipe-lucca-taumaturgo-de-oliveira"
-              ],
-              "jobTitle": t.hero.role
-            }),
-          }}
-        />
-
-        <link rel="canonical" href="https://ofelipelucca.vercel.app" />
-      </Head>
-
       <div className="relative min-h-screen bg-background">
         <Navbar
           activeSection={activeSection}
@@ -111,9 +72,9 @@ function PortfolioContent() {
         <main
           className="overflow-y-auto"
           style={{
-            paddingTop: NAVBAR_HEIGHT,
-            paddingBottom: FOOTER_HEIGHT,
-            height: `calc(100vh - ${NAVBAR_HEIGHT + FOOTER_HEIGHT}px)`,
+            paddingTop: 30,
+            paddingBottom: 32,
+            height: `calc(100vh - 88px)`,
           }}
         >
           <ActiveComponent />
