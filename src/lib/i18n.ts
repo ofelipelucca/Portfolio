@@ -74,8 +74,7 @@ export const translations = {
           name: "EldenRing na Vida Real",
           description:
             "Aplicação em Python usando OpenCV e MediaPipe para detectar movimentos do usuário e jogar Elden Ring.",
-          tags: ["Python", "OpenCV", "MediaPipe", "PySide6"],
-          url: "https://github.com/ofelipelucca/EldenRing-Rolando-na-Vida-Real",
+          tags: ["Python", "OpenCV", "MediaPipe", "PySide6"]
         },
         {
           name: "Voz do Atleticano",
@@ -195,8 +194,7 @@ export const translations = {
           name: "EldenRing in Real Life",
           description:
             "Python application using OpenCV and MediaPipe to detect user movements and play Elden Ring.",
-          tags: ["Python", "OpenCV", "MediaPipe", "PySide6"],
-          url: "https://github.com/ofelipelucca/EldenRing-Rolando-na-Vida-Real",
+          tags: ["Python", "OpenCV", "MediaPipe", "PySide6"]
         },
         {
           name: "Voz do Atleticano",
