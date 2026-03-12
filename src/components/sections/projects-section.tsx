@@ -25,7 +25,7 @@ export function ProjectsSection() {
                     {project.name}
                   </h3>
                   {hasUrl && (
-                    <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity shrink-0 mt-0.5" />
+                    <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground transition-opacity shrink-0 mt-0.5" />
                   )}
                 </div>
                 {/* Descrição sempre completa */}
